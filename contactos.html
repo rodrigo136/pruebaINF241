@@ -94,94 +94,139 @@
                 "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
             }
         },
-    },
-}
-</script>
-<style>
-  .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      display: inline-block;
-      vertical-align: middle;
-  }
-  body {
-      background-color: #fcf9f8;
-      -webkit-font-smoothing: antialiased;
-  }
-  .glass-card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
-  }
-  .form-focus-glow:focus {
-      box-shadow: 0 0 0 2px rgba(0, 29, 52, 0.1);
-  }
-  
-  /* Animación Premium para Menús Desplegables Flotantes */
-  .dropdown-animate {
-      transform-origin: top;
-      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .group:hover .dropdown-menu {
-      opacity: 1;
-      transform: scaleY(1);
-  }
-</style>
+      },
+    }
+    </script>
+    <style>
+      .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          display: inline-block;
+          vertical-align: middle;
+      }
+      body {
+          background-color: #fcf9f8;
+          -webkit-font-smoothing: antialiased;
+      }
+      .glass-card {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+      }
+      .form-focus-glow:focus {
+          box-shadow: 0 0 0 2px rgba(0, 29, 52, 0.1);
+      }
+      
+      /* Animación Premium para Menús Desplegables Flotantes */
+      .dropdown-animate {
+          transform-origin: top;
+          transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .group:hover .dropdown-menu {
+          opacity: 1;
+          transform: scaleY(1);
+      }
+    </style>
 </head>
 <body class="font-body-md text-on-surface">
 
-    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
-        <div class="flex items-center gap-4">
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-6 py-3 shadow-xl border border-primary/20 bg-primary-container">
+        
+        <!-- LOGO -->
+        <div class="flex items-center gap-3 shrink-0">
             <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
-            <span class="font-display-lg text-headline-md font-bold text-white hidden lg:block">Creadent</span>
+            <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
+            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
         </div>
         
-        <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
-            <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+        <!-- ENLACES CENTRALES -->
+        <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
+        <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="index.html">Inicio</a>
             
-            <div class="relative group">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="marco-teorico.html">
+            <!-- DROPDOWN 1: Marco Teórico -->
+            <div class="relative group h-full">
+                <!-- Aumentamos el padding vertical (py-4) para expandir el área táctil -->
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
                     Marco Teórico 
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
                 
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 dropdown-animate pointer-events-none group-hover:pointer-events-auto border border-outline-variant/30 z-50">
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                <!-- "EL PUENTE INVISIBLE": absolute top-full con pt-2 permite cruzar el mouse sin que se cierre -->
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                    </div>
                 </div>
             </div>
             
-            <div class="relative group">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="analisis-estructurado.html">
+            <!-- DROPDOWN 2: Análisis Estructurado -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
                     Análisis Estructurado 
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
                 
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 dropdown-animate pointer-events-none group-hover:pointer-events-auto border border-outline-variant/30 z-50">
-                    <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
-                    
-                    <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                        
+                        <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                    </div>
                 </div>
             </div>
             
-            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
-            <a class="text-white font-bold border-b-2 border-white pb-1" href="contactos.html">Contactos</a>
+            <!-- DROPDOWN 3: Diagramas -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Diagramas
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html">Diagrama de clases</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="diagrama-procesos.html">Diagrama de Procesos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROPDOWN 4: Casos de Uso -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Casos de Uso
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso.html">Caso de Uso</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-Negocios.html">Casos de Uso de Negocio</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-nivel-expandido.html">Casos de Uso A Nivel Expandido</a>
+                    </div>
+                </div>
+            </div>            
+            
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
+            <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0" href="contactos.html">Contactos</a>
         </div>
         
-        <div class="flex items-center gap-4">
-            <button class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">Agendar Cita</button>
-            <button id="menu-open-btn" class="md:hidden text-white"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        <!-- BOTONES DERECHOS -->
+        <div class="flex items-center gap-4 shrink-0">
+            <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
+            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
+            <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
         </div>
     </nav>
 
@@ -209,179 +254,69 @@
         </div>
     </div>
 
-    <main class="pt-16">
-        <section class="max-w-container-max mx-auto px-margin-desktop pt-24 pb-16">
-            <div class="text-center max-w-2xl mx-auto">
-                <span class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mb-4 block">Hablemos de su salud dental</span>
-                <h1 class="font-display-lg text-display-lg text-primary mb-6">Contáctenos</h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant">Estamos aquí para resolver sus dudas y coordinar su próxima visita a nuestra clínica en La Paz.</p>
-            </div>
-        </section>
+    <main class="pt-8 pb-32 max-w-[1200px] mx-auto px-6">
         
-        <section class="max-w-container-max mx-auto px-margin-desktop pb-24">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <div class="lg:col-span-7 bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] border border-surface-container">
-                    <h2 class="font-headline-md text-headline-md text-primary mb-8">Envíenos un mensaje</h2>
-                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Mensaje enviado. Nos pondremos en contacto pronto.');">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Nombre Completo</label>
-                                <input class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all" placeholder="Ej. Juan Pérez" type="text"/>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Correo Electrónico</label>
-                                <input class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all" placeholder="juan@ejemplo.com" type="email"/>
-                            </div>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Servicio de Interés</label>
-                            <select class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all appearance-none">
-                                <option>Ortodoncia</option>
-                                <option>Implantología Oral</option>
-                                <option>Estética Dental</option>
-                                <option>Consulta General</option>
-                            </select>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Mensaje</label>
-                            <textarea class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all" placeholder="¿Cómo podemos ayudarle?" rows="4"></textarea>
-                        </div>
-                        <button class="w-full md:w-auto bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2" type="submit">
-                            Enviar Mensaje
-                            <span class="material-symbols-outlined text-[18px]">send</span>
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="lg:col-span-5 flex flex-col gap-8">
-                    <div class="bg-primary text-on-primary rounded-3xl p-8 flex-1">
-                        <h3 class="font-headline-md text-headline-md mb-6">Datos de Contacto</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary-container p-3 rounded-full flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">call</span>
-                                </div>
-                                <div>
-                                    <p class="font-label-caps text-label-caps opacity-60 uppercase mb-1">Teléfono</p>
-                                    <a class="font-body-lg text-body-lg hover:underline transition-all" href="tel:+59169987205">+591 69987205</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary-container p-3 rounded-full flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">mail</span>
-                                </div>
-                                <div>
-                                    <p class="font-label-caps text-label-caps opacity-60 uppercase mb-1">Correo Electrónico</p>
-                                    <a class="font-body-lg text-body-lg hover:underline transition-all" href="mailto:luque2219@gmail.com">luque2219@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary-container p-3 rounded-full flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">emergency</span>
-                                </div>
-                                <div>
-                                    <p class="font-label-caps text-label-caps opacity-60 uppercase mb-1">Urgencias 24/7</p>
-                                    <p class="font-body-lg text-body-lg">Atención Inmediata</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-surface-container rounded-3xl p-8 border border-outline-variant">
-                        <h3 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
-                            <span class="material-symbols-outlined">schedule</span>
-                            Horarios
-                        </h3>
-                        <div class="space-y-3">
-                            <div class="flex justify-between items-center border-b border-outline-variant pb-2">
-                                <span class="font-body-md text-on-surface-variant">Lunes - Viernes</span>
-                                <span class="font-body-md font-bold text-primary">09:00 - 19:00</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-outline-variant pb-2">
-                                <span class="font-body-md text-on-surface-variant">Sábado</span>
-                                <span class="font-body-md font-bold text-primary">09:00 - 13:00</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="font-body-md text-on-surface-variant">Domingo</span>
-                                <span class="text-error font-semibold">Cerrado</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="max-w-container-max mx-auto px-margin-desktop pb-24">
-            <div class="text-center mb-12">
-                <h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-4">Preguntas Frecuentes para tu Visita</h2>
-                <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Resolvemos tus dudas principales para que tu experiencia en Creadent sea cómoda y transparente.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] transition-all hover:scale-105 duration-300">
-                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                        <span class="material-symbols-outlined text-on-primary-container">assignment_ind</span>
-                    </div>
-                    <h3 class="font-headline-md text-xl text-primary mb-4">¿Qué debo traer a mi primera cita?</h3>
-                    <p class="font-body-md text-on-surface-variant">Solo tu identificación y cualquier radiografía previa que tengas.</p>
-                </div>
-                <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] transition-all hover:scale-105 duration-300">
-                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                        <span class="material-symbols-outlined text-on-primary-container">payments</span>
-                    </div>
-                    <h3 class="font-headline-md text-xl text-primary mb-4">¿Ofrecen financiamiento?</h3>
-                    <p class="font-body-md text-on-surface-variant">Sí, contamos con planes de pago personalizados para ortodoncia e implantes.</p>
-                </div>
-                <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] transition-all hover:scale-105 duration-300">
-                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                        <span class="material-symbols-outlined text-on-primary-container">emergency</span>
-                    </div>
-                    <h3 class="font-headline-md text-xl text-primary mb-4">¿Atienden emergencias?</h3>
-                    <p class="font-body-md text-on-surface-variant">Contamos con atención prioritaria para casos de dolor agudo o trauma.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+        <div class="flex items-center gap-2 mb-16 text-on-surface-variant font-body-md text-sm mt-4">
+            <span class="material-symbols-outlined text-[18px]">home</span>
+            <span>/</span>
+            <span>Contactos</span>
+        </div>
 
-    <section class="max-w-container-max mx-auto px-margin-desktop pb-24">
-        <div class="text-center mb-12">
-            <h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-4">Nuestro Liderazgo Visionario</h2>
-            <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Los rostros detrás de la excelencia dental en Creadent.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
+            
+            <div>
+                <h2 class="font-display-lg text-headline-md font-bold text-primary mb-6">Integrantes</h2>
+                <div class="flex flex-col gap-3">
+                    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-on-surface-variant font-body-md">
+                        Univ. Arroyo Espinoza Carlos Andres
+                    </div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-on-surface-variant font-body-md">
+                        Univ. Tarifa Vargas Jazer Esteban
+                    </div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-on-surface-variant font-body-md">
+                        Univ. Marca Vargas Ariel Rodrigo
+                    </div>
+                    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-on-surface-variant font-body-md">
+                        Univ. Plata Peñafiel Franco Joel
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="font-display-lg text-headline-md font-bold text-primary mb-6">Contactanos</h2>
+                <p class="font-body-md text-on-surface-variant mb-10 leading-relaxed">
+                    En Creadent, nos esforzamos por brindarte la mejor experiencia de atención. Si tienes alguna consulta o necesitas asistencia, no dudes en contactarnos. Nuestro equipo está listo para ayudarte con cualquier duda o recomendación sobre nuestros tratamientos y servicios.
+                </p>
+
+                <div class="space-y-6 text-on-surface-variant font-body-md">
+                    <div class="flex gap-4 items-start border-b border-outline-variant/20 pb-6">
+                        <span class="material-symbols-outlined text-[20px] mt-0.5">location_on</span>
+                        <p class="leading-relaxed">Dirección: AV. BALLIVIAN #1185 ENTRE CALLE 18 Y 19 ZONA CALACOTO</p>
+                    </div>
+
+                    <div class="flex gap-4 items-center border-b border-outline-variant/20 pb-6">
+                        <span class="material-symbols-outlined text-[20px]">call</span>
+                        <p>Celular: +591 69987205</p>
+                    </div>
+
+                    <div class="flex gap-4 items-center">
+                        <span class="material-symbols-outlined text-[20px]">mail</span>
+                        <p>E-mail: luque2219@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <h3 class="font-bold text-primary mb-4 font-body-md text-base">Horarios de Atención</h3>
+                    <div class="space-y-2 text-on-surface-variant font-body-md text-sm">
+                        <p>Lunes – Viernes: 09:00 AM – 06:00 PM</p>
+                        <p>Sábado: 10:00 AM – 02:00 PM</p>
+                        <p>Domingo: Cerrado</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
-                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
-                    <span class="material-symbols-outlined text-4xl">person</span>
-                </div>
-                <h3 class="font-headline-md text-xl text-primary mb-1">Dr. Carlos Mendoza Arze</h3>
-                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Socio Fundador & Director Clínico</p>
-                <p class="font-body-md text-on-surface-variant">Dedicado a transformar sonrisas con la tecnología más avanzada del país.</p>
-            </div>
-            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
-                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
-                    <span class="material-symbols-outlined text-4xl">person</span>
-                </div>
-                <h3 class="font-headline-md text-xl text-primary mb-1">Dra. Elena Vargas Llosa</h3>
-                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Co-Fundadora & Especialista Senior</p>
-                <p class="font-body-md text-on-surface-variant">Liderando la innovación en estética dental con un enfoque humano y preciso.</p>
-            </div>
-            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
-                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
-                    <span class="material-symbols-outlined text-4xl">person</span>
-                </div>
-                <h3 class="font-headline-md text-xl text-primary mb-1">Dr. Roberto Salas Quiroga</h3>
-                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Director de Implantología</p>
-                <p class="font-body-md text-on-surface-variant">Comprometido con la restauración funcional y la salud integral de cada paciente.</p>
-            </div>
-            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
-                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
-                    <span class="material-symbols-outlined text-4xl">person</span>
-                </div>
-                <h3 class="font-headline-md text-xl text-primary mb-1">Dra. Marina Blanco Peñaranda</h3>
-                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Directora de Ortodoncia</p>
-                <p class="font-body-md text-on-surface-variant">Visionaria en el diseño de sonrisas perfectas mediante ortodoncia invisible.</p>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer class="bg-surface-container dark:bg-surface-dim w-full py-12 border-t border-outline-variant">
         <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">

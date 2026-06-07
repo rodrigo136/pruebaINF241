@@ -1,499 +1,324 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="es">
+<html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Análisis Orientado a Objetos | Creadent Dental Clinic</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;600;700;800&family=Inter:wght=400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "on-background": "#1b1c1c",
-            "inverse-on-surface": "#f3f0ef",
-            "surface-container": "#f0eded",
-            "inverse-surface": "#303030",
-            "glass-fill": "rgba(255, 255, 255, 0.7)",
-            "secondary": "#5c5f61",
-            "on-primary-fixed": "#001d34",
-            "surface-tint": "#3b6186",
-            "on-error": "#ffffff",
-            "tertiary": "#301500",
-            "secondary-fixed": "#e0e3e5",
-            "on-tertiary": "#ffffff",
-            "on-secondary-container": "#626567",
-            "background": "#fcf9f8",
-            "surface-container-lowest": "#ffffff",
-            "on-primary-container": "#769cc3",
-            "secondary-container": "#e0e3e5",
-            "primary-fixed-dim": "#a4caf4",
-            "on-secondary-fixed": "#191c1e",
-            "tertiary-container": "#4f2601",
-            "primary-fixed": "#cfe5ff",
-            "on-primary-fixed-variant": "#21496d",
-            "tertiary-fixed": "#ffdcc5",
-            "error": "#ba1a1a",
-            "on-tertiary-fixed-variant": "#6a3b14",
-            "tertiary-fixed-dim": "#fcb886",
-            "on-surface-variant": "#42474e",
-            "on-error-container": "#93000a",
-            "surface-bright": "#fcf9f8",
-            "surface-variant": "#e5e2e1",
-            "on-secondary": "#ffffff",
-            "surface-container-highest": "#e5e2e1",
-            "surface-container-low": "#f6f3f2",
-            "on-secondary-fixed-variant": "#444749",
-            "surface-dim": "#dcd9d9",
-            "on-tertiary-container": "#c98b5d",
-            "surface": "#fcf9f8",
-            "on-surface": "#1b1c1c",
-            "on-tertiary-fixed": "#301400",
-            "on-primary": "#ffffff",
-            "outline-variant": "#c2c7cf",
-            "error-container": "#ffdad6",
-            "outline": "#73777f",
-            "surface-chalk": "#F8F8F8",
-            "glass-border": "rgba(255, 255, 255, 0.2)",
-            "primary": "#001d34",
-            "inverse-primary": "#a4caf4",
-            "secondary-fixed-dim": "#c4c7c9",
-            "surface-container-high": "#eae7e7",
-            "primary-container": "#003355"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "full": "9999px"
-          },
-          "spacing": {
-            "container-max": "1280px",
-            "baseline": "8px",
-            "margin-mobile": "20px",
-            "margin-desktop": "64px",
-            "gutter": "24px"
-          },
-          "fontFamily": {
-            "sans": ["Inter", "sans-serif"],
-            "display": ["Plus Jakarta Sans", "sans-serif"],
-            "body-lg": ["Inter", "sans-serif"],
-            "label-caps": ["Inter", "sans-serif"],
-            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
-            "display-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
-            "body-md": ["Inter", "sans-serif"],
-            "display-lg": ["Plus Jakarta Sans", "sans-serif"]
-          },
-          "fontSize": {
-            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-            "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-            "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
-            "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
-            "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-            "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
-          }
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "secondary-container": "#e0e3e5",
+                "surface-container-high": "#eae7e7",
+                "outline": "#73777f",
+                "surface-dim": "#dcd9d9",
+                "inverse-surface": "#303030",
+                "secondary-fixed-dim": "#c4c7c9",
+                "on-tertiary-fixed": "#301400",
+                "glass-fill": "rgba(255, 255, 255, 0.7)",
+                "surface-container-highest": "#e5e2e1",
+                "surface": "#fcf9f8",
+                "surface-chalk": "#F8F8F8",
+                "secondary-fixed": "#e0e3e5",
+                "primary-container": "#003355",
+                "on-secondary-fixed": "#191c1e",
+                "outline-variant": "#c2c7cf",
+                "on-tertiary-container": "#c98b5d",
+                "background": "#fcf9f8",
+                "on-primary-fixed-variant": "#21496d",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fcf9f8",
+                "on-surface-variant": "#42474e",
+                "on-secondary-fixed-variant": "#444749",
+                "on-primary-fixed": "#001d34",
+                "primary-fixed": "#cfe5ff",
+                "tertiary-fixed": "#ffdcc5",
+                "secondary": "#5c5f61",
+                "inverse-primary": "#a4caf4",
+                "surface-tint": "#3b6186",
+                "tertiary": "#301500",
+                "tertiary-fixed-dim": "#fcb886",
+                "primary-fixed-dim": "#a4caf4",
+                "on-tertiary-fixed-variant": "#6a3b14",
+                "on-secondary-container": "#626567",
+                "surface-container-lowest": "#ffffff",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "tertiary-container": "#4f2601",
+                "error-container": "#ffdad6",
+                "on-surface": "#1b1c1c",
+                "on-tertiary": "#ffffff",
+                "primary": "#001d34",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f6f3f2",
+                "on-background": "#1b1c1c",
+                "on-secondary": "#ffffff",
+                "surface-container": "#f0eded",
+                "inverse-on-surface": "#f3f0ef",
+                "on-primary-container": "#769cc3",
+                "error": "#ba1a1a",
+                "surface-variant": "#e5e2e1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "baseline": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-md": ["Plus Jakarta Sans"],
+                "display-lg-mobile": ["Plus Jakarta Sans"],
+                "label-caps": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
         },
       },
     }
-  </script>
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      vertical-align: middle;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .soft-shadow {
-      box-shadow: 0 40px 40px -20px rgba(0, 29, 52, 0.04);
-    }
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 24px;
-    }
-    .dropdown-animate {
-      transition: all 0.2s ease-in-out;
-      transform-origin: top;
-    }
-  </style>
-</head>
-<body class="bg-background text-on-background font-body-md overflow-x-hidden">
-
-  <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container transition-all duration-300">
-    <div class="flex items-center gap-4">
-      <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ"/>
-      <span class="font-display-lg text-headline-md font-bold text-white hidden lg:block">Creadent</span>
-    </div>
-    
-    <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
-      <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
-      
-      <div class="relative group">
-        <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="marco-teorico.html">
-          Marco Teórico 
-          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
-        </a>
-        
-        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 pointer-events-none group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto dropdown-animate border border-outline-variant/30 z-50">
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
-        </div>
-      </div>
-
-      <div class="relative group">
-        <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="analisis-estrcuturado.html">
-          Análisis Estructurado 
-          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
-        </a>
-        
-        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 pointer-events-none group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto dropdown-animate border border-outline-variant/30 z-50">
-          <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
-          <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
-          <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
-          
-          <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
-          <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
-          <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
-        </div>
-      </div>
-
-      <div class="relative group">
-        <a class="flex items-center gap-1 text-white font-bold border-b-2 border-white pb-1 py-2 font-body-md text-body-md" href="orientado-a-objetos.html">
-          Orientado a Objetos 
-          <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
-        </a>
-        <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 pointer-events-none group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto dropdown-animate border border-outline-variant/30 z-50">
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html#clases">Diagrama de Clases</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html#casos">Casos de Uso</a>
-          <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html#secuencia">Diagramas de Secuencia</a>
-        </div>
-      </div>
-
-      <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
-      <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
-    </div>
-    
-    <div class="flex items-center gap-4">
-      <a href="contactos.html" class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">
-        Agendar Cita
-      </a>
-      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-        <span class="material-symbols-outlined text-2xl">menu</span>
-      </button>
-    </div>
-  </nav>
-
-  <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-primary-container border-l border-white/10 z-50 transform translate-x-full transition-transform duration-300 md:hidden p-6 flex flex-col gap-6">
-    <div class="flex justify-end">
-      <button id="close-btn" class="text-white focus:outline-none">
-        <span class="material-symbols-outlined text-2xl">close</span>
-      </button>
-    </div>
-    <nav class="flex flex-col gap-4 text-white font-headline-md font-semibold">
-      <a class="hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
-      <a class="hover:text-primary-fixed transition-colors" href="marco-teorico.html">Marco Teórico</a>
-      <a class="hover:text-primary-fixed transition-colors" href="modelo-ambiental.html">Modelo Ambiental</a>
-      <a class="hover:text-primary-fixed transition-colors" href="modelo-de-comportamiento.html">Modelo de Comportamiento</a>
-      <a class="text-primary-fixed border-l-2 border-white pl-2 font-bold" href="orientado-a-objetos.html">Orientado a Objetos</a>
-      <a class="hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
-      <a class="hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
-    </nav>
-  </div>
-
-  <main class="pt-8">
-    <section class="relative py-24 md:py-32 overflow-hidden">
-      <div class="absolute inset-0 z-0 bg-surface-chalk opacity-50"></div>
-      <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
-        <div class="max-w-3xl">
-          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary font-label-caps text-label-caps mb-6">DISEÑO DE SISTEMAS</span>
-          <h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-6 leading-tight">
-            Análisis y Diseño <br/><span class="text-on-primary-container">Orientado a Objetos</span>
-          </h1>
-          <p class="font-body-lg text-body-lg text-secondary max-w-2xl mb-10">
-            Arquitectura robusta para el ecosistema clínico Creadent, fundamentada en entidades digitales que mimetizan el flujo real de la atención odontológica moderna.
-          </p>
-          <div class="flex gap-4">
-            <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all" href="#clases">Explorar Modelado</a>
-            <a class="flex items-center gap-2 text-primary font-semibold px-8 py-4" href="#casos">
-              Ver Casos de Uso
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-2/3 bg-primary/5 blur-[120px] rounded-full"></div>
-    </section>
-
-    <section class="py-24 bg-surface-container-lowest scroll-mt-28" id="clases">
-      <div class="max-w-container-max mx-auto px-margin-desktop">
-        <div class="text-center mb-16">
-          <h2 class="font-display-lg text-display-lg text-primary mb-4">Estructura de Entidades</h2>
-          <p class="text-secondary max-w-xl mx-auto">Modelado lógico que define las responsabilidades y relaciones entre los pilares fundamentales de nuestra clínica dental.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div class="md:col-span-4 bg-white p-8 rounded-xl soft-shadow border border-surface-variant hover:border-primary/20 transition-all group">
-            <div class="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-              <span class="material-symbols-outlined text-primary group-hover:text-white">patient_list</span>
-            </div>
-            <h3 class="font-headline-md text-headline-md text-primary mb-4">Clase: Paciente</h3>
-            <ul class="space-y-3 font-body-md text-secondary">
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Identificación Única (DNI)</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Historial Clínico (Ref)</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Preferencias de Tratamiento</li>
-            </ul>
-          </div>
-          <div class="md:col-span-4 bg-white p-8 rounded-xl soft-shadow border border-surface-variant hover:border-primary/20 transition-all group">
-            <div class="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-              <span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
-            </div>
-            <h3 class="font-headline-md text-headline-md text-primary mb-4">Clase: Cita</h3>
-            <ul class="space-y-3 font-body-md text-secondary">
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Fecha y Hora</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Estado (Confirmada/Pendiente)</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Relación Odontólogo-Paciente</li>
-            </ul>
-          </div>
-          <div class="md:col-span-4 bg-white p-8 rounded-xl soft-shadow border border-surface-variant hover:border-primary/20 transition-all group">
-            <div class="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-              <span class="material-symbols-outlined text-primary group-hover:text-white">medical_services</span>
-            </div>
-            <h3 class="font-headline-md text-headline-md text-primary mb-4">Clase: Odontólogo</h3>
-            <ul class="space-y-3 font-body-md text-secondary">
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Especialidad Médica</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Disponibilidad de Turnos</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span> Firma Digital Autorizada</li>
-            </ul>
-          </div>
-          <div class="md:col-span-12 relative rounded-2xl overflow-hidden aspect-video md:aspect-[21/9] soft-shadow mt-4">
-            <img class="w-full h-full object-cover" alt="Dentista analizando software clínico en monitor de alta definición" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhuJIFbti0nAwA24H4FfQeY1hbkcyYlUgnMvnFfOpTzNOaY00NXr_4zsRu-kriojFfB9IToK9nLA1080nE5m11A7heew9uT9sGTJhLUjc7Pnd4Xq4sjXfNDfTtdl698hthxxGhWq6GBUfMQF4H5v5Szn92cJG3_JOYJ2C7X5VK5kfIaT8PgeGR4LGpF-nqi6Kv5oGxeWDsefJF9YxZeJWLNoYjX20DG_WjtWTs2tdzKISgPaCvBj7viOYXJ4v3FAIVu9iXxUNBW82q"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-12">
-              <h4 class="text-white font-headline-md text-headline-md mb-2">Diagrama de Clases Unificado</h4>
-              <p class="text-white/80 max-w-2xl">Integración total entre pacientes, especialistas y la administration financiera para una gestión 360 del ciclo de vida del tratamiento.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 bg-background scroll-mt-28" id="casos">
-      <div class="max-w-container-max mx-auto px-margin-desktop">
-        <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
-          <div class="max-w-2xl">
-            <h2 class="font-display-lg text-display-lg text-primary mb-4">Casos de Uso Principales</h2>
-            <p class="text-secondary">Definición de las interacciones críticas entre los actores (Pacientes, Personal Administrativo, Doctores) y las funcionalidades del sistema.</p>
-          </div>
-          <div class="flex gap-2">
-            <button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-              <span class="material-symbols-outlined">chevron_left</span>
-            </button>
-            <button class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-              <span class="material-symbols-outlined">chevron_right</span>
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-10 rounded-2xl border border-surface-variant/50 relative overflow-hidden">
-            <span class="text-primary/10 font-bold text-6xl absolute top-4 right-6 pointer-events-none">01</span>
-            <h3 class="font-headline-md text-headline-md text-primary mb-6">Agendamiento Web</h3>
-            <p class="text-secondary mb-8">El paciente interactúa con la interfaz de calendario para seleccionar un hueco disponible, validando seguros y especialidades en tiempo real.</p>
-            <div class="space-y-4 border-t border-surface-variant pt-6">
-              <div class="flex justify-between text-label-caps font-label-caps text-secondary uppercase tracking-wider">
-                <span>Actor Principal</span>
-                <span class="text-primary">Paciente</span>
-              </div>
-              <div class="flex justify-between text-label-caps font-label-caps text-secondary uppercase tracking-wider">
-                <span>Prioridad</span>
-                <span class="text-primary">Crítica</span>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-10 rounded-2xl border border-primary/20 relative overflow-hidden ring-4 ring-primary/5">
-            <span class="text-primary/10 font-bold text-6xl absolute top-4 right-6 pointer-events-none">02</span>
-            <h3 class="font-headline-md text-headline-md text-primary mb-6">Historial Clínico</h3>
-            <p class="text-secondary mb-8">Gestión segura de registros odontológicos, imágenes radiográficas y planes de tratamiento, accesibles solo por personal autorizado.</p>
-            <div class="space-y-4 border-t border-surface-variant pt-6">
-              <div class="flex justify-between text-label-caps font-label-caps text-secondary uppercase tracking-wider">
-                <span>Actor Principal</span>
-                <span class="text-primary">Odontólogo</span>
-              </div>
-              <div class="flex justify-between text-label-caps font-label-caps text-secondary uppercase tracking-wider">
-                <span>Prioridad</span>
-                <span class="text-primary">Alta</span>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-10 rounded-2xl border border-surface-variant/50 relative overflow-hidden">
-            <span class="text-primary/10 font-bold text-6xl absolute top-4 right-6 pointer-events-none">03</span>
-            <h3 class="font-headline-md text-headline-md text-primary mb-6">Control de Cobros</h3>
-            <p class="text-secondary mb-8">Generación automática de presupuestos y facturas basadas en los procedimientos realizados durante la sesión clínica.</p>
-            <div class="space-y-4 border-t border-surface-variant pt-6">
-              <div class="flex justify-between text-label-caps font-label-caps text-secondary uppercase tracking-wider">
-                <span>Actor Principal</span>
-                <span class="text-primary">Administrador</span>
-              </div>
-              <div class="flex justify-between text-label-caps font-label-caps text-secondary uppercase tracking-wider">
-                <span>Prioridad</span>
-                <span class="text-primary">Media</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-24 bg-surface-chalk scroll-mt-28" id="secuencia">
-      <div class="max-w-container-max mx-auto px-margin-desktop">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div>
-            <span class="font-label-caps text-label-caps text-primary mb-4 block">DIAGRAMAS DE SECUENCIA</span>
-            <h2 class="font-display-lg text-display-lg text-primary mb-8">Flujo de Interacción Dinámica</h2>
-            <p class="text-body-lg text-secondary mb-8">
-              Visualizamos el paso de mensajes entre objetos para procesos complejos como la "Confirmación de Cita con Recordatorio Automático".
-            </p>
-            <div class="space-y-6">
-              <div class="flex gap-4 p-6 bg-white rounded-xl soft-shadow border-l-4 border-primary">
-                <span class="material-symbols-outlined text-primary">send</span>
-                <div>
-                  <h4 class="font-bold text-primary mb-1">Activación de Objeto</h4>
-                  <p class="text-sm text-secondary">La clase SistemaCitas instancia el servicio de Notificación al detectar un cambio de estado.</p>
-                </div>
-              </div>
-              <div class="flex gap-4 p-6 bg-white rounded-xl soft-shadow border-l-4 border-primary/40">
-                <span class="material-symbols-outlined text-primary/60">update</span>
-                <div>
-                  <h4 class="font-bold text-primary mb-1">Ciclo de Vida</h4>
-                  <p class="text-sm text-secondary">Control estricto de la persistencia de datos durante la sesión del usuario.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="aspect-square bg-white rounded-full p-8 soft-shadow flex items-center justify-center overflow-hidden border border-surface-variant">
-              <img class="w-full h-full object-cover rounded-full opacity-90 scale-110" alt="Dashboard de visualización de flujos y diagramas clínicos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOkRElJGdXK_b1szOeFXqBIVMEPDSwcKwyZmGo68wKfBd7F1u9Rzxn5AWe-ClHKGtuP3MC3Fd-eUHYaccafnUEyijVQrV5Q5c88WnNm3A32sUECMATIQufJq7rCFGCSTL4R6W9JpF_0_G-bRLneZArWzA-PSAnrle5CHQdbipTShjmIh-pbV9g4Xk2DL3V59ERqxUa6FgqjbV4WLkLQ1xxf6pnZ7CxKLGvYRyQzLznw_QfiZvT2OCO0D5gbwcf-PR5t54PQgd2JLrQ"/>
-              <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-            </div>
-            <div class="absolute -top-4 -right-4 bg-primary text-white p-4 rounded-lg font-bold text-sm shadow-xl">
-              UML 2.5 Certified
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="pt-24 pb-12 border-t border-outline-variant bg-primary text-on-primary">
-    <div class="max-w-container-max mx-auto px-margin-desktop">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        <div class="space-y-6">
-          <div class="flex items-center gap-3">
-            <img alt="Logo Creadent" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ"/>
-            <span class="font-display-lg text-headline-md font-bold text-white">Creadent</span>
-          </div>
-          <p class="text-white/80 font-body-md">Excelencia en ortodoncia e implantología para devolverte la confianza de una sonrisa perfecta.</p>
-          <div class="flex gap-4">
-            <a class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="#">
-              <span class="material-symbols-outlined text-sm">public</span>
-            </a>
-            <a class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="mailto:luque2219@gmail.com">
-              <span class="material-symbols-outlined text-sm">mail</span>
-            </a>
-            <a class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="tel:+59169987205">
-              <span class="material-symbols-outlined text-sm">phone</span>
-            </a>
-          </div>
-        </div>
-        <div class="space-y-6">
-          <h5 class="font-bold uppercase tracking-widest text-sm text-white">Enlaces Rápidos</h5>
-          <ul class="space-y-3">
-            <li><a class="text-white/80 hover:text-white transition-colors" href="index.html">Inicio</a></li>
-            <li><a class="text-white/80 hover:text-white transition-colors" href="marco-teorico.html">Marco Teórico</a></li>
-            <li><a class="text-white/80 hover:text-white transition-colors" href="modelo-ambiental.html">Análisis Estructurado</a></li>
-            <li><a class="text-white/80 hover:text-white transition-colors" href="orientado-a-objetos.html">Orientado a Objetos</a></li>
-          </ul>
-        </div>
-        <div class="space-y-6">
-          <h5 class="font-bold uppercase tracking-widest text-sm text-white">Secciones</h5>
-          <ul class="space-y-3">
-            <li><a class="text-white/80 hover:text-white transition-colors" href="#clases">Diagrama de Clases</a></li>
-            <li><a class="text-white/80 hover:text-white transition-colors" href="#casos">Casos de Uso</a></li>
-            <li><a class="text-white/80 hover:text-white transition-colors" href="#secuencia">Flujos de Secuencia</a></li>
-          </ul>
-        </div>
-        <div class="space-y-6">
-          <h5 class="font-bold uppercase tracking-widest text-sm text-white">Contacto</h5>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-white/80">
-              <span class="material-symbols-outlined text-white/60">phone</span>
-              +591 69987205
-            </li>
-            <li class="flex items-center gap-3 text-white/80">
-              <span class="material-symbols-outlined text-white/60">mail</span>
-              luque2219@gmail.com
-            </li>
-            <li class="flex items-center gap-3 text-white/80">
-              <span class="material-symbols-outlined text-white/60">location_on</span>
-              La Paz, Bolivia
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="pt-8 border-t border-white/10 text-center flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-white/60">© 2026 Creadent Dental Clinic. Todos los derechos reservados.</p>
-        <div class="flex gap-8 text-sm font-semibold text-white/80">
-          <a class="hover:text-white" href="#">Privacidad</a>
-          <a class="hover:text-white" href="#">Términos de Servicio</a>
-          <a class="hover:text-white" href="contactos.html">Portal del Paciente</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Control de menú móvil dinámico
-    const menuBtn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-full');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.add('translate-x-full');
-    });
-
-    // Cerrar el menú móvil automáticamente al hacer clic en cualquier enlace ancla
-    document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
-      });
-    });
-
-    // Efecto dinámico al hacer scroll en la barra superior
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('py-2', 'shadow-2xl', 'bg-primary-container/95', 'backdrop-blur-md');
-        nav.classList.remove('py-3');
-      } else {
-        nav.classList.add('py-3');
-        nav.classList.remove('py-2', 'bg-primary-container/95', 'backdrop-blur-md');
+    </script>
+    <style>
+      .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          display: inline-block;
+          vertical-align: middle;
       }
-    });
-  </script>
+      body {
+          background-color: #fcf9f8;
+          -webkit-font-smoothing: antialiased;
+      }
+      .glass-card {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+      }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-6 py-3 shadow-xl border border-primary/20 bg-primary-container">
+        
+        <!-- LOGO -->
+        <div class="flex items-center gap-3 shrink-0">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
+            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
+        </div>
+        
+        <!-- ENLACES CENTRALES -->
+        <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
+        <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0" href="index.html">Inicio</a>
+            
+            <!-- DROPDOWN 1: Marco Teórico -->
+            <div class="relative group h-full">
+                <!-- Aumentamos el padding vertical (py-4) para expandir el área táctil -->
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                    Marco Teórico 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <!-- "EL PUENTE INVISIBLE": absolute top-full con pt-2 permite cruzar el mouse sin que se cierre -->
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DROPDOWN 2: Análisis Estructurado -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                    Análisis Estructurado 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                        
+                        <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DROPDOWN 3: Diagramas -->
+            <div class="relative group h-full">
+                <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0">
+                    Diagramas
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html">Diagrama de clases</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="diagrama-procesos.html">Diagrama de Procesos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROPDOWN 4: Casos de Uso -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Casos de Uso
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso.html">Caso de Uso</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-Negocios.html">Casos de Uso de Negocio</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-nivel-expandido.html">Casos de Uso A Nivel Expandido</a>
+                    </div>
+                </div>
+            </div>            
+            
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
+        </div>
+        
+        <!-- BOTONES DERECHOS -->
+        <div class="flex items-center gap-4 shrink-0">
+            <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
+            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
+            <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+        <div id="mobile-menu-content" class="absolute top-0 right-0 w-[280px] h-full bg-white p-6 shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300 rounded-l-3xl">
+            <div>
+                <div class="flex justify-between items-center mb-8">
+                    <span class="font-display-lg text-xl font-bold text-primary">Menú</span>
+                    <button id="menu-close-btn" class="text-primary p-1 hover:bg-surface-container rounded-full transition-colors">
+                        <span class="material-symbols-outlined text-2xl">close</span>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-4 text-body-md overflow-y-auto">
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="index.html">Inicio</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="marco-teorico.html">Marco Teórico</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="analisis-estructurado.html">Análisis Estructurado</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="orientado-a-objetos.html">Orientado A Objetos</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="video.html">Videos</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="contactos.html">Contactos</a>
+                </div>
+            </div>
+            <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-primary-container transition-all active:scale-95 shadow-md mt-4">
+                Agendar Cita
+            </button>
+        </div>
+    </div>
+
+    <main class="pt-24 pb-32 max-w-[1200px] mx-auto px-6 min-h-[70vh] flex flex-col items-center justify-start text-center">
+        
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
+            Diagrama de clases
+        </h1>
+
+        <div class="w-full max-w-4xl rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
+    <img class="w-full h-auto object-contain" src="Resources/Diagramas-Orientado a Objetos.drawio.png" alt="...">
+</div>
+        
+    </main>
+
+    <footer class="bg-surface-container dark:bg-surface-dim w-full py-12 border-t border-outline-variant">
+        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <span class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">Creadent</span>
+                <p class="font-body-md text-on-surface-variant pr-8">Innovación en ortodoncia e implantología oral con los más altos estándares de calidad y ética profesional.</p>
+            </div>
+            <div class="space-y-4">
+                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Enlaces Rápidos</h5>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Facebook</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Instagram</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Legal</h5>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Privacidad</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Términos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-body-md text-on-surface-variant opacity-70">© 2024 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="fixed bottom-8 right-8 bg-primary text-on-primary w-12 h-12 rounded-full shadow-lg items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110 active:scale-90 z-40 flex" id="back-to-top">
+        <span class="material-symbols-outlined">north</span>
+    </button>
+
+    <script>
+        // Lógica del Menú Móvil (Drawer)
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuContent = document.getElementById('mobile-menu-content');
+        const menuOpenBtn = document.getElementById('menu-open-btn');
+        const menuCloseBtn = document.getElementById('menu-close-btn');
+
+        function openMenu() {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenuContent.classList.remove('translate-x-full');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenuContent.classList.add('translate-x-full');
+        }
+
+        if (menuOpenBtn) menuOpenBtn.addEventListener('click', openMenu);
+        if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) closeMenu();
+        });
+
+        // Botón Back to Top y Visibilidad
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

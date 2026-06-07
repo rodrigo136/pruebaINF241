@@ -1,10 +1,11 @@
-<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -92,167 +93,239 @@
                 "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
             }
         },
-    },
-}
-</script>
-<style>
-    .glass-card {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+      },
     }
-    .soft-shadow {
-        box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
-    }
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    .active-tab {
-        color: #001d34;
-        font-weight: 700;
-        border-bottom: 2px solid #001d34;
-        padding-bottom: 0.25rem;
-    }
-</style>
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+        }
+        .soft-shadow {
+            box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            color: #001d34;
+            font-weight: 700;
+            border-bottom: 2px solid #001d34;
+            padding-bottom: 0.25rem;
+        }
+    </style>
 </head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
     <!-- TopNavBar -->
-    <header class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
-        <div class="flex items-center h-16 w-48">
-            <img src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ" alt="Creadent Logo" class="h-full w-auto object-contain">
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-6 py-3 shadow-xl border border-primary/20 bg-primary-container">
+        
+        <!-- LOGO -->
+        <div class="flex items-center gap-3 shrink-0">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
+            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
         </div>
-        <nav class="hidden md:flex gap-8 items-center">
-            <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+        
+        <!-- ENLACES CENTRALES -->
+        <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
+        <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer" href="index.html">Inicio</a>
             
-            <div class="relative group">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="marco-teorico.html">
-                    Marco Teorico <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
-                </a>
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#introduccion">Introduccion</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#antecedentes">Antecedentes</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#planteamiento">Planteamiento del Problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#arbol">Arbol de problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#formulacion">Formulacion del problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#proposito">Proposito del estudio</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#metodologia">Metodologia</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#cronograma">Planificacion de actividades</a>
-                </div>
-            </div>
-
-            <!-- MENÚ DESPLEGABLE DE ANÁLISIS ESTRUCTURADO CORREGIDO -->
-            <div class="relative group">
-                <!-- Cambiado a enlace apuntando exactamente a tu archivo -->
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="analisis-estrcuturado.html">
-                    Analisis Estructurado <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+            <!-- DROPDOWN 1: Marco Teórico -->
+            <div class="relative group h-full">
+                <!-- Aumentamos el padding vertical (py-4) para expandir el área táctil -->
+                <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0">
+                    Marco Teórico 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
                 
-                <!-- Contenedor del menú desplegable -->
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-                    
-                    <div class="px-6 py-2 text-label-caps text-primary/50">Modelo Ambiental</div>
-                    <!-- Enlaces ajustados al nombre exacto de tu archivo y sus respectivas secciones -->
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#propositos">Declaracion de Propositos</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
-                    
-                    <div class="px-6 py-2 mt-2 text-label-caps text-primary/50">Modelo de Comportamiento</div>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
-                    
+                <!-- "EL PUENTE INVISIBLE": absolute top-full con pt-2 permite cruzar el mouse sin que se cierre -->
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DROPDOWN 2: Análisis Estructurado -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                    Análisis Estructurado 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                        
+                        <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DROPDOWN 3: Diagramas -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Diagramas
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html">Diagrama de clases</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="diagrama-procesos.html">Diagrama de Procesos</a>
+                    </div>
                 </div>
             </div>
 
-            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
-        </nav>
-        <button class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">
-            Agendar Cita
-        </button>
-    </header>
+            <!-- DROPDOWN 4: Casos de Uso -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Casos de Uso
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso.html">Caso de Uso</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-Negocios.html">Casos de Uso de Negocio</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-nivel-expandido.html">Casos de Uso A Nivel Expandido</a>
+                    </div>
+                </div>
+            </div>            
+            
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
+        </div>
+        
+        <!-- BOTONES DERECHOS -->
+        <div class="flex items-center gap-4 shrink-0">
+            <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
+            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
+            <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
+        </div>
+    </nav>
+    
     <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
-        <section id="introduccion" class="mb-24 flex flex-col md:flex-row items-center gap-12 scroll-mt-28">
+        
+        <!-- INTRODUCCIÓN -->
+        <section id="introduccion" class="mb-24 md:flex-row items-center gap-12 scroll-mt-28">
             <div class="flex-1 space-y-6">
                 <span class="inline-block text-primary font-label-caps text-label-caps tracking-widest bg-primary-fixed px-3 py-1 rounded-full">INVESTIGACIÓN CLÍNICA</span>
                 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">Marco Teórico y Fundamentación Científica</h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    Introducción a los principios científicos que rigen la ortodoncia e implantología moderna en Creadent, garantizando tratamientos basados en la evidencia para la salud oral óptima.
-                </p>
-            </div>
-            <div class="flex-1 w-full aspect-video rounded-3xl overflow-hidden soft-shadow relative">
-                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PNEUKZxyaj4oUnkvCWjwM68vSnOALVVkkhjIvhYcpuPqHzlVpey1DFvYHj-_UdWjO4IG3VgCwTEcweLQn5cznn-6ftVhYsz9d0v_Y5Qysr_UN1q4Eou8W6DkH5gfVeZvXdQ7uZ4BXKQiSHCFJEoltyYGWSoj2Qyu0DquD5swtd1OGSJ1DTi8YVADld0dbEQZLtlhBIVKByZZS7XjupQ2DIXc9mlgZm8735w34d9b6hrmsj5AJAGBiqwbeBtyo3pDaeaCd5CgflE-">
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                
+                <h2 class="font-display-lg text-headline-md text-primary mt-12 mb-8">Introduccion</h2>
+                <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant mb-12">
+                    <p>La evolución tecnológica ha transformado drásticamente la manera en que se administran los servicios de salud en la actualidad. En el ámbito odontológico, la dependencia de herramientas analógicas para la gestión diaria representa una barrera significativa para la optimización del tiempo y la calidad de la atención. Cuando los procesos fundamentales, como la programación de citas y el resguardo de información clínica, se manejan manualmente, existe un alto riesgo de incurrir en desorganización, pérdida de datos críticos y demoras operativas que afectan directamente la experiencia del paciente.</p>
+                    <p>En este contexto, el consultorio dental "Creadent" requiere una actualización integral de su infraestructura administrativa. La práctica habitual en esta clínica de utilizar agendas de papel y cuadernos de registro ha demostrado ser ineficiente para manejar la dinámica de trabajo del especialista. Esta metodología anticuada impide tener una visión global e inmediata del calendario, limita el seguimiento detallado de los tratamientos (como el registro de notas de evolución y procedimientos pendientes) y fragmenta el acceso al historial médico y financiero de los pacientes.</p>
+                    <p>Para dar respuesta a estas deficiencias, este documento expone el análisis y diseño de un sistema de información centralizado para "Creadent", estructurado bajo un enfoque orientado a objetos. Mediante la elaboración de modelos ambientales y de comportamiento, se busca mapear con precisión las interacciones entre el personal médico, el área administrativa y los pacientes. Esta arquitectura metodológica garantiza la proyección de una solución tecnológica lógica, modular y altamente escalable que responda con exactitud a los requerimientos del flujo de trabajo clínico.</p>
+                    <p>En última instancia, la concepción de este software trasciende la simple digitalización de una agenda; su propósito es reestructurar por completo la gestión operativa de "Creadent". Al unificar los expedientes clínicos, automatizar el control de citas y facilitar el registro de intervenciones médicas, el sistema permitirá al dentista enfocarse primordialmente en la atención sanitaria, optimizando los recursos del negocio y elevando considerablemente los estándares de su servicio.</p>
+                </div>
+                
+                <div class="flex-1 w-full aspect-video rounded-3xl overflow-hidden soft-shadow relative">
+                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PNEUKZxyaj4oUnkvCWjwM68vSnOALVVkkhjIvhYcpuPqHzlVpey1DFvYHj-_UdWjO4IG3VgCwTEcweLQn5cznn-6ftVhYsz9d0v_Y5Qysr_UN1q4Eou8W6DkH5gfVeZvXdQ7uZ4BXKQiSHCFJEoltyYGWSoj2Qyu0DquD5swtd1OGSJ1DTi8YVADld0dbEQZLtlhBIVKByZZS7XjupQ2DIXc9mlgZm8735w34d9b6hrmsj5AJAGBiqwbeBtyo3pDaeaCd5CgflE-">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
+        <!-- ANTECEDENTES Y PLANTEAMIENTO -->
+        <section class="grid grid-cols-1 gap-8 mb-24">
             <div id="antecedentes" class="md:col-span-7 bg-surface-container-lowest p-10 rounded-3xl soft-shadow border border-outline-variant/30 scroll-mt-28">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
                     <h2 class="font-headline-md text-headline-md text-primary">Antecedentes</h2>
                 </div>
                 <div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-                    <p>La evolución de la ortodoncia ha transitado desde técnicas mecánicas puras hasta la integración de la biología ósea y la biomecánica avanzada. En Creadent, retomamos los estudios clásicos de Angle combinados con la vanguardia tecnológica en alineación invisible e implantes de carga inmediata.</p>
-                    <p>Revisiones sistemáticas recientes demuestran que la integración temprana de diagnósticos digitales reduce los tiempos de tratamiento en un 30%, fundamentando nuestra metodología operativa.</p>
+                    <p>El consultorio dental "Creadent" se ha consolidado con el tiempo como un centro odontológico enfocado en brindar un cuidado integral y personalizado para la salud bucal de sus pacientes. A medida que su trayectoria ha avanzado y su volumen de atenciones ha ido en aumento, también ha crecido la complejidad de administrar sus operaciones diarias, exigiendo un nivel de organización interna mucho más riguroso.</p>
+                    <p>Desde sus inicios hasta la actualidad, las gestiones administrativas y clínicas dentro del consultorio se han apoyado de forma casi exclusiva en métodos tradicionales. El ciclo de atención, que abarca desde el primer contacto con el paciente hasta su seguimiento médico, se maneja de manera manual. La programación, confirmación, reprogramación y cancelación de citas se controla enteramente mediante agendas físicas. De igual forma, la información vital de cada persona —que incluye datos de contacto, historial clínico, registro de tratamientos realizados y el control de pagos— se almacena en expedientes de papel o mediante registros poco estructurados.</p>
+                    <p>A medida que el flujo de trabajo diario ha incrementado, esta dinámica operativa ha evidenciado importantes limitaciones que afectan la productividad. El uso de cuadernos físicos resulta altamente impráctico para la agilidad que requiere un entorno médico; por ejemplo, impide al especialista tener un control detallado sobre los eventos de cada consulta, limitando su capacidad para consultar rápidamente información pasada o registrar notas de evolución vitales (como piezas dentales pendientes de tratamiento o radiografías requeridas). Esta carencia de un sistema informático centralizado y adaptado a las necesidades específicas de "Creadent" ralentiza los procesos de atención y limita el potencial de crecimiento de la clínica.</p>
                 </div>
             </div>
-            <div id="planteamiento" class="md:col-span-5 bg-primary-container text-on-primary-container p-10 rounded-3xl soft-shadow scroll-mt-28">
+
+            <div id="planteamiento" class="md:col-span-7 bg-primary-container text-on-primary-container p-10 rounded-3xl soft-shadow scroll-mt-28">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="material-symbols-outlined text-primary-fixed text-3xl">priority_high</span>
                     <h2 class="font-headline-md text-headline-md text-on-primary">Planteamiento del Problema</h2>
                 </div>
-                <p class="font-body-md text-body-md text-on-primary-container/90">
-                    A pesar de los avances, una gran proporción de la población presenta maloclusiones complejas y pérdida dental prematura que afecta no solo la estética, sino la función masticatoria y la salud sistémica. El desafío reside en proveer soluciones definitivas, menos invasivas y de alta durabilidad.
-                </p>
+                <div class="space-y-4 font-body-md text-body-md text-on-primary-container/90">
+                    <p>El consultorio dental "Creadent", al experimentar un crecimiento constante en su flujo de pacientes, enfrenta desafíos operativos y administrativos significativos derivados de la gestión manual de sus procesos diarios. Actualmente, el registro de atenciones, la programación de citas y el manejo de los expedientes médicos se realizan exclusivamente mediante agendas físicas y documentos en papel. Esta metodología carece de integración entre las distintas funciones vitales del consultorio, aislando el control de los tiempos de atención, el registro clínico (historial y notas de evolución) y el seguimiento financiero (control de pagos de tratamientos).</p>
+                    <p>Esta fragmentación operativa provoca vulnerabilidades críticas en el manejo de la información. Conlleva un alto riesgo de pérdida o deterioro de datos médicos importantes, facilita la aparición de errores o cruces en la asignación de horarios, y dificulta el seguimiento estructurado de los procedimientos dentales pendientes de cada paciente. Además, la ausencia de un sistema centralizado impide al especialista acceder de manera instantánea a los antecedentes clínicos y registrar con agilidad el progreso de cada consulta. En conjunto, estos inconvenientes limitan la capacidad de la clínica para ofrecer un servicio fluido, impactando negativamente en la experiencia del paciente y dificultando la toma de decisiones estratégicas para el crecimiento del consultorio.</p>
+                </div>
             </div>
         </section>
 
+        <!-- ÁRBOL DEL PROBLEMA -->
         <section id="arbol" class="mb-24 py-12 scroll-mt-28">
             <div class="text-center mb-16">
-                <h2 class="font-display-lg text-headline-md text-primary mb-4">Árbol del Problema</h2>
-                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                <div class="bg-surface-chalk p-8 rounded-2xl border border-outline-variant/50 relative">
-                    <div class="absolute -top-4 left-8 bg-error text-on-error px-4 py-1 rounded-full font-label-caps text-[10px] tracking-widest">EFECTOS</div>
-                    <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-                        <li class="flex gap-3"><span class="material-symbols-outlined text-error text-xl">trending_down</span> Baja autoestima y fobia social</li>
-                        <li class="flex gap-3"><span class="material-symbols-outlined text-error text-xl">trending_down</span> Problemas digestivos por mala masticación</li>
-                        <li class="flex gap-3"><span class="material-symbols-outlined text-error text-xl">trending_down</span> Desgaste articular (ATM) severo</li>
-                    </ul>
-                </div>
-                <div class="bg-primary p-8 rounded-2xl shadow-2xl flex flex-col justify-center items-center text-center transform md:scale-110 z-10">
-                    <span class="material-symbols-outlined text-on-primary text-5xl mb-4">emergency_home</span>
-                    <h3 class="font-headline-md text-headline-md text-on-primary leading-tight">Alta Incidencia de Patologías Dentomaxilares</h3>
-                </div>
-                <div class="bg-surface-chalk p-8 rounded-2xl border border-outline-variant/50 relative">
-                    <div class="absolute -top-4 left-8 bg-primary-container text-on-primary-container px-4 py-1 rounded-full font-label-caps text-[10px] tracking-widest">CAUSAS</div>
-                    <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-                        <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl">account_tree</span> Factores genéticos hereditarios</li>
-                        <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl">account_tree</span> Malos hábitos en la infancia</li>
-                        <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl">account_tree</span> Falta de acceso a prevención oportuna</li>
-                    </ul>
+                <h2 class="font-display-lg text-headline-md text-primary mb-6">Árbol del Problema</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
+                <div class="rounded-2xl shadow-lg max-w-4xl mx-auto p-4 bg-white">
+                    <img class="w-full h-auto object-contain no-parallax" src="Resources/Diagramas-Arbol de problemas.drawio.png" alt="Árbol de problemas">
                 </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 items-center">
-            <div class="space-y-8">
+        <!-- FORMULACIÓN Y OBJETIVOS -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 items-start">
+            <div class="space-y-12">
                 <div id="formulacion" class="scroll-mt-28">
-                    <h2 class="font-headline-md text-headline-md text-primary mb-4">Formulación del Problema</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant italic border-l-4 border-primary pl-6">
-                        "¿Cómo impacta la aplicación de protocolos digitales de ortodoncia e implantología guiada en la predictibilidad de los resultados estéticos y funcionales a largo plazo en pacientes adultos?"
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary text-2xl">help_center</span>
+                        <h2 class="font-headline-md text-headline-md text-primary">Formulacion del problema</h2>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant italic border-l-4 border-primary pl-6 bg-surface-container-lowest py-4 pr-4 rounded-r-xl shadow-sm">
+                        ¿Cómo diseñar e implementar un sistema de información clínico y administrativo centralizado para el consultorio dental "Creadent" que permita optimizar la gestión del calendario de citas, el manejo del historial médico de los pacientes y el seguimiento preciso de las notas de evolución y pagos por tratamientos? 
                     </p>
                 </div>
+                
                 <div id="proposito" class="scroll-mt-28">
-                    <h2 class="font-headline-md text-headline-md text-primary mb-4">Propósito del Estudio</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant">
-                        El propósito central es estandarizar un modelo de atención odontológica premium que minimice el error humano mediante el uso de escaneo intraoral y planificación 3D, elevando el estándar de éxito en rehabilitaciones orales complejas.
-                    </p>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-primary text-2xl">flag</span>
+                        <h2 class="font-headline-md text-headline-md text-primary">Proposito del estudio</h2>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="font-headline-md text-lg text-primary mb-3">Objetivo General</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Desarrollar el análisis y diseño de un sistema de información y gestión para el consultorio dental "Creadent", el cual permita el control eficiente del calendario de citas, los expedientes de los pacientes, las notas de evolución y el registro de pagos, con el fin de mejorar la calidad de la atención odontológica y optimizar la administración interna del negocio.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-headline-md text-lg text-primary mb-3">Objetivos Especificos</h3>
+                        <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+                                <div>Identificar requerimientos: Recopilar y definir las necesidades funcionales y operativas del consultorio dental, tales como la gestión de consultas, historiales médicos y control financiero.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+                                <div>Elaborar el modelo ambiental y de comportamiento: Trazar los límites del sistema y definir cómo interactúan los usuarios (dentista, recepcionista, pacientes) con los procesos del software.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+                                <div>Diseñar un modelo orientado a objetos: Estructurar de manera lógica la base de datos y las entidades clave del sistema (Citas, Pacientes, Tratamientos, Pagos) para asegurar su escalabilidad y eficiencia.</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            
+            <div class="grid grid-cols-2 gap-4 sticky top-28">
                 <div class="space-y-4">
                     <div class="h-48 rounded-2xl overflow-hidden shadow-lg">
                         <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC9bNcoNugxVi4yWK8pA6qdtiowLjg8SBO8uO3au20WXex8TSXfe9WoXgHBhu-aRqevVz78coaOzCfqKdL1-zt8uVgOUR1ilDNXul25QL9P5AUQ1qRrU40o6zT9-oxGUG7TWmvKUC6ZGrxNcif36renFXko1mlu9HQqTg0AAOpS_Y4JC9p-fDsJmtj0vzEbAdhP0UfGF9Bp-Pc-1c-ZoWb2mJRCK2OxcveKSY5edX1k4hP8Wk1IvS8Y39QAY1LLAHrxd8ebVJ1l3Hz">
@@ -272,44 +345,139 @@
             </div>
         </section>
 
+        <!-- METODOLOGÍA -->
+        <!-- METODOLOGÍA -->
         <section id="metodologia" class="mb-24 scroll-mt-28">
-            <h2 class="font-display-lg text-headline-md text-primary text-center mb-12">Metodología de Trabajo</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
-                        <span class="material-symbols-outlined text-3xl">biotech</span>
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="font-display-lg text-headline-md text-primary mb-4">Metodología de Trabajo</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">Este apartado detalla el enfoque metodológico, los instrumentos y las estrategias de recolección de información que fundamentan el análisis, así como los argumentos técnicos y operativos que validan el desarrollo del proyecto.</p>
+            </div>
+            
+            <!-- Cambiamos el grid por un flex vertical (columna) con separación -->
+            <div class="flex flex-col gap-8">
+                
+                <!-- Tarjeta Horizontal 1 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group hover:border-primary/30 transition-colors duration-300">
+                    <div class="w-20 h-20 shrink-0 bg-primary-fixed rounded-2xl flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">biotech</span>
                     </div>
-                    <h3 class="font-headline-md text-headline-md text-primary">Analítica</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Diagnóstico profundo mediante escaneo volumétrico y análisis cefalométrico digital.</p>
-                </div>
-                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
-                        <span class="material-symbols-outlined text-3xl">design_services</span>
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Investigación</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Con el propósito de examinar de manera profunda los flujos de trabajo, las dificultades administrativas y las necesidades operativas de quienes interactúan con la información en el consultorio, se implementó un enfoque de investigación cualitativo. Para ello, se llevó a cabo una entrevista estructurada mediante un cuestionario con el especialista del consultorio dental "Creadent". Este instrumento sirvió como guía para identificar las limitaciones del formato analógico actual y definir las expectativas del nuevo software, especialmente en lo que respecta a la flexibilidad de la agenda y la precisión en el registro de notas de progreso clínico.</p>
                     </div>
-                    <h3 class="font-headline-md text-headline-md text-primary">Diseño</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Simulación virtual del resultado final (Smile Design) previo al inicio clínico.</p>
                 </div>
-                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
-                        <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                
+                <!-- Tarjeta Horizontal 2 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group hover:border-primary/30 transition-colors duration-300">
+                    <div class="w-20 h-20 shrink-0 bg-primary-fixed rounded-2xl flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">design_services</span>
                     </div>
-                    <h3 class="font-headline-md text-headline-md text-primary">Ejecución</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Intervenciones guiadas por software para máxima precisión y mínimo trauma.</p>
-                </div>
-                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
-                        <span class="material-symbols-outlined text-3xl">verified</span>
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Justificación</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">La transición de un esquema de trabajo manual a una plataforma digital se fundamenta en la necesidad imperativa de modernizar el servicio odontológico. La creciente afluencia de pacientes y la complejidad de los tratamientos dentales a largo plazo exigen el soporte de una herramienta que elimine los errores humanos del registro en papel y optimice los recursos generales de la clínica.</p>
                     </div>
-                    <h3 class="font-headline-md text-headline-md text-primary">Validación</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Monitoreo post-tratamiento para asegurar la estabilidad biológica y estética.</p>
                 </div>
+                
+                <!-- Tarjeta Horizontal 3 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group hover:border-primary/30 transition-colors duration-300">
+                    <div class="w-20 h-20 shrink-0 bg-primary-fixed rounded-2xl flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">trending_up</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Justificación económica</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">La incorporación del sistema se traduce en un incremento directo de la productividad del consultorio, reduciendo drásticamente las horas que el personal dedica a buscar fichas físicas o reordenar agendas. Al optimizar los tiempos de consulta, el negocio experimentará beneficios financieros específicos como:</p>
+                        <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant bg-surface-container-lowest/50 p-6 rounded-2xl border border-outline-variant/30">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5">arrow_right</span>
+                                <span><strong>Optimización del tiempo clínico:</strong> Mayor disponibilidad de horas de atención efectivas para los pacientes.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5">arrow_right</span>
+                                <span><strong>Reducción de cartera vencida:</strong> Control riguroso sobre los saldos pendientes y planes de pago diferidos por tratamientos complejos.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5">arrow_right</span>
+                                <span><strong>Disminución de costos operativos:</strong> Reducción progresiva del gasto en papelería, impresión y almacenamiento físico.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5">arrow_right</span>
+                                <span><strong>Prevención de pérdidas por ausentismo:</strong> Mitigación de horas muertas mediante una gestión oportuna de cancelaciones y reprogramaciones.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta Horizontal 4 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group hover:border-primary/30 transition-colors duration-300">
+                    <div class="w-20 h-20 shrink-0 bg-primary-fixed rounded-2xl flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">diversity_1</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Justificación social</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">El impacto comunitario del software se reflejará de forma inmediata en la experiencia del paciente, quien percibirá una reducción en los tiempos de espera, mayor transparencia en sus transacciones y una atención clínica más fluida. Asimismo, para el equipo de "Creadent", la automatización reducirá la carga de estrés administrativo, proporcionando un entorno laboral más organizado y eficiente.</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta Horizontal 5 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group hover:border-primary/30 transition-colors duration-300">
+                    <div class="w-20 h-20 shrink-0 bg-primary-fixed rounded-2xl flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">memory</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Justificación técnica</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Desde la perspectiva de infraestructura, el consultorio cuenta con el equipamiento básico de hardware y conectividad necesario para soportar el despliegue de la solución tecnológica. Al no requerir de herramientas o servidores especializados fuera del estándar comercial, la implementación de la base de datos y la interfaz del sistema es completamente viable con los recursos técnicos disponibles.</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta Horizontal 6 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group hover:border-primary/30 transition-colors duration-300">
+                    <div class="w-20 h-20 shrink-0 bg-primary-fixed rounded-2xl flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors shadow-sm">
+                        <span class="material-symbols-outlined text-4xl">dashboard</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Alcances</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">El sistema estará diseñado exclusivamente para el entorno interno de "Creadent", restringiendo sus funciones de acuerdo con los privilegios y roles de usuario definidos (por ejemplo, Dentista y Recepcionista). El software estará compuesto de manera modular por las siguientes áreas:</p>
+                        <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant bg-surface-container-lowest/50 p-6 rounded-2xl border border-outline-variant/30">
+                            <li class="flex items-start gap-3">
+                                <div class="bg-primary/10 p-2 rounded-lg shrink-0 mt-0.5">
+                                    <span class="material-symbols-outlined text-primary text-xl block">event</span>
+                                </div>
+                                <div><strong>Módulo de Agenda y Citas:</strong> Controlará integralmente el ciclo de vida de las consultas (agendación, confirmación, reprogramación y cancelación), permitiendo visualizar el estado de la sala de espera en tiempo real.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="bg-primary/10 p-2 rounded-lg shrink-0 mt-0.5">
+                                    <span class="material-symbols-outlined text-primary text-xl block">folder_shared</span>
+                                </div>
+                                <div><strong>Módulo de Expediente de Pacientes:</strong> Centralizará los datos de contacto, antecedentes médicos generales, historial de intervenciones y la opción de asociar archivos multimedia (como radiografías dentales).</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="bg-primary/10 p-2 rounded-lg shrink-0 mt-0.5">
+                                    <span class="material-symbols-outlined text-primary text-xl block">edit_note</span>
+                                </div>
+                                <div><strong>Módulo de Notas de Evolución:</strong> Permitirá al especialista registrar las anotaciones de progreso clínico correspondientes a cada cita, detallando procedimientos efectuados y requerimientos para sesiones posteriores.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="bg-primary/10 p-2 rounded-lg shrink-0 mt-0.5">
+                                    <span class="material-symbols-outlined text-primary text-xl block">payments</span>
+                                </div>
+                                <div><strong>Módulo de Control Financiero:</strong> Gestionará el registro de los pagos recibidos, el balance de deudas por tratamientos extendidos y el historial transaccional de cada paciente. Para agilizar este proceso, el módulo se apoyará en un catálogo interno de tratamientos y precios predefinidos, manteniendo la flexibilidad de ingresar montos personalizados cuando el especialista lo requiera.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
+        <!-- CRONOGRAMA -->
         <section id="cronograma" class="mb-24 scroll-mt-28">
-            <h2 class="font-display-lg text-headline-md text-primary mb-8">Cronograma de Planificación</h2>
-            <div class="overflow-hidden rounded-3xl border border-outline-variant bg-surface-container-lowest soft-shadow">
-                <table class="w-full text-left border-collapse">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="material-symbols-outlined text-primary text-3xl">calendar_month</span>
+                <h2 class="font-display-lg text-headline-md text-primary">Cronograma de Planificacion</h2>
+            </div>
+            
+            <div class="overflow-x-auto rounded-3xl border border-outline-variant bg-surface-container-lowest soft-shadow">
+                <table class="w-full text-left border-collapse min-w-[600px]">
                     <thead>
                         <tr class="bg-primary-container text-on-primary-container">
                             <th class="p-6 font-label-caps text-label-caps uppercase tracking-widest">Actividad</th>
@@ -323,31 +491,32 @@
                             <td class="p-6 font-semibold text-primary">Recolección de datos clínicos</td>
                             <td class="p-6">Fase I: Diagnóstico</td>
                             <td class="p-6">1-2 Semanas</td>
-                            <td class="p-6"><span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-bold uppercase">Completado</span></td>
+                            <td class="p-6"><span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-bold uppercase border border-tertiary-fixed-dim">Completado</span></td>
                         </tr>
                         <tr class="border-b border-outline-variant/30 hover:bg-surface-chalk transition-colors">
                             <td class="p-6 font-semibold text-primary">Planificación Digital 3D</td>
                             <td class="p-6">Fase II: Diseño</td>
                             <td class="p-6">1 Semana</td>
-                            <td class="p-6"><span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase">En Progreso</span></td>
+                            <td class="p-6"><span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase border border-primary-fixed-dim">En Progreso</span></td>
                         </tr>
                         <tr class="border-b border-outline-variant/30 hover:bg-surface-chalk transition-colors">
                             <td class="p-6 font-semibold text-primary">Fase Quirúrgica / Instalación</td>
                             <td class="p-6">Fase III: Clinical</td>
                             <td class="p-6">Variable</td>
-                            <td class="p-6"><span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-bold uppercase">Pendiente</span></td>
+                            <td class="p-6"><span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-bold uppercase border border-outline-variant">Pendiente</span></td>
                         </tr>
                         <tr class="hover:bg-surface-chalk transition-colors">
                             <td class="p-6 font-semibold text-primary">Evaluación de Resultados</td>
                             <td class="p-6">Fase IV: Seguimiento</td>
                             <td class="p-6">6-12 Meses</td>
-                            <td class="p-6"><span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-bold uppercase">Pendiente</span></td>
+                            <td class="p-6"><span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-bold uppercase border border-outline-variant">Pendiente</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
     </main>
+    
     <!-- Footer -->
     <footer class="bg-surface-container dark:bg-surface-dim w-full py-12 border-t border-outline-variant">
         <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -376,20 +545,22 @@
                 <h4 class="font-label-caps text-label-caps text-primary uppercase font-bold mb-4">Suscripción</h4>
                 <div class="flex gap-2">
                     <input class="bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-2 w-full focus:ring-primary focus:border-primary" placeholder="Email" type="email">
-                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg material-symbols-outlined">send</button>
+                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg material-symbols-outlined hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors">send</button>
                 </div>
             </div>
         </div>
         <div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/30 text-center">
             <p class="font-body-md text-body-md text-on-surface-variant opacity-70">
-                © 2024 Creadent Ortodoncia &amp; Implantologia Oral. Todos los derechos reservados.
+                © 2024 Creadent Ortodoncia & Implantologia Oral. Todos los derechos reservados.
             </p>
         </div>
     </footer>
+    
     <script>
         // Simple parallax effect for images on scroll
         window.addEventListener('scroll', () => {
-            const images = document.querySelectorAll('img');
+            // Agregamos :not(.no-parallax) para que ignore el diagrama
+            const images = document.querySelectorAll('img:not(.no-parallax)');
             images.forEach(img => {
                 const speed = 0.05;
                 const rect = img.getBoundingClientRect();
@@ -401,6 +572,5 @@
             });
         });
     </script>
-
-
-</body></html>
+</body>
+</html>

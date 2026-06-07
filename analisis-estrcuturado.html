@@ -115,56 +115,103 @@
 </head>
 <body class="bg-surface-chalk text-on-surface font-body-md selection:bg-primary-fixed-dim">
     <!-- Header Navigation -->
-    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
-        <div class="flex items-center gap-4">
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-6 py-3 shadow-xl border border-primary/20 bg-primary-container">
+        
+        <!-- LOGO -->
+        <div class="flex items-center gap-3 shrink-0">
             <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
-            <span class="font-display-lg text-headline-md font-bold text-white hidden lg:block">Creadent</span>
+            <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
+            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
         </div>
-        <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
-            <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+        
+        <!-- ENLACES CENTRALES -->
+        <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
+        <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
+            <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0" href="index.html">Inicio</a>
             
-            <div class="relative group">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2" href="marco-teorico.html">
-                    Marco Teorico <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+            <!-- DROPDOWN 1: Marco Teórico -->
+            <div class="relative group h-full">
+                <!-- Aumentamos el padding vertical (py-4) para expandir el área táctil -->
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                    Marco Teórico 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introduccion</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planteamiento">Planteamiento del Problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Arbol de problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulacion del problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Proposito del estudio</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodologia</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#cronograma">Planificacion de actividades</a>
+                
+                <!-- "EL PUENTE INVISIBLE": absolute top-full con pt-2 permite cruzar el mouse sin que se cierre -->
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                    </div>
                 </div>
             </div>
             
-            <!-- MENÚ DESPLEGABLE EN analisis-estrcuturado.html -->
-            <div class="relative group">
-                <a class="flex items-center gap-1 text-primary-fixed font-bold border-b-2 border-primary-fixed transition-colors py-2" href="analisis-estrcuturado.html">
-                    Análisis Estructurado <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+            <!-- DROPDOWN 2: Análisis Estructurado -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                    Análisis Estructurado 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-                    
-                    <div class="px-6 py-2 text-label-caps text-primary/50">Modelo Ambiental</div>
-                    <!-- Enlaces directos a las secciones de Modelo Ambiental -->
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#propositos">Declaracion de Propositos</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
-                    
-                    <div class="px-6 py-2 mt-2 text-label-caps text-primary/50">Modelo de Comportamiento</div>
-                    <!-- Enlaces directos a las secciones de Modelo de Comportamiento -->
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                        
+                        <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                    </div>
                 </div>
             </div>
             
-            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
+            <!-- DROPDOWN 3: Diagramas -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Diagramas
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html">Diagrama de clases</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="diagrama-procesos.html">Diagrama de Procesos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROPDOWN 4: Casos de Uso -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Casos de Uso
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso.html">Caso de Uso</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-Negocios.html">Casos de Uso de Negocio</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-nivel-expandido.html">Casos de Uso A Nivel Expandido</a>
+                    </div>
+                </div>
+            </div>            
+            
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
         </div>
-        <div class="flex items-center gap-4">
-            <button class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">Agendar Cita</button>
-            <button class="md:hidden text-white"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        
+        <!-- BOTONES DERECHOS -->
+        <div class="flex items-center gap-4 shrink-0">
+            <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
+            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
+            <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
         </div>
     </nav>
     <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
