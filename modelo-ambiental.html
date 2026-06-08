@@ -112,6 +112,10 @@
           border: 1px solid rgba(255, 255, 255, 0.2);
           box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
       }
+      .items-center{
+            justify-content:space-around !important;
+            align-items:center
+      }
     </style>
 </head>
 <body class="font-body-md text-on-surface">
@@ -120,15 +124,14 @@
         
         <!-- LOGO -->
         <div class="flex items-center gap-3 shrink-0">
-            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" style="width: 70px; height: auto; padding:0 !important;" src="./Resources/logoGrande.png">
             <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
-            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
         </div>
         
         <!-- ENLACES CENTRALES -->
         <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
         <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
-            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer" href="index.html">Inicio</a>
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0" href="index.html">Inicio</a>
             
             <!-- DROPDOWN 1: Marco Teórico -->
             <div class="relative group h-full">
@@ -155,7 +158,7 @@
             
             <!-- DROPDOWN 2: Análisis Estructurado -->
             <div class="relative group h-full">
-                <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
                     Análisis Estructurado 
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
@@ -176,7 +179,7 @@
             <!-- DROPDOWN 3: Diagramas -->
             <div class="relative group h-full">
                 <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
-                    Diagramas
+                    Orientado a Objetos
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
                 
@@ -190,7 +193,7 @@
 
             <!-- DROPDOWN 4: Casos de Uso -->
             <div class="relative group h-full">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0  ">
                     Casos de Uso
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
@@ -205,13 +208,11 @@
             </div>            
             
             <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
         </div>
         
         <!-- BOTONES DERECHOS -->
         <div class="flex items-center gap-4 shrink-0">
             <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
-            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
             <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
         </div>
     </nav>
@@ -246,7 +247,9 @@
             A) Declaracion de propositos
         </h1>
 
-        <p> CONTEXTO AQUI</p>
+        <p> Realizar un sistema de gestión para una clínica dental bajo el modelo ambiental que registre y controle la asignación de citas, 
+            los pagos recibidos de los pacientes y el expediente clínico odontológico, permitiendo además el seguimiento automatizado de la
+             agenda diaria tanto para el personal de recepción como para los dentistas.</p>
 
 
         <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
@@ -262,34 +265,74 @@
             C) Lista de Acontecimientos
         </h1>
 
-        <P>CONTEXTO AQUI</P>
+        <P style="text-align: left;">1. Datos personales de paciente: Permite a la recepcionista registrar por primera vez o actualizar la información básica del paciente en el sistema para mantener la base de datos al día.<br><br>
+
+2. Control de citas: Ocurre cuando el paciente o la recepcionista solicitan, modifican o cancelan un espacio en la agenda, permitiendo al sistema gestionar los horarios disponibles.<br><br>
+
+3. Confirmación de cita: El sistema valida la disponibilidad de la agenda y emite de forma automática una notificación de éxito o recordatorio hacia el paciente.<br><br>
+
+4. Petición de historial médico: Al iniciar la consulta, el dentista solicita los antecedentes del paciente y el sistema le devuelve el expediente clínico correspondiente para su diagnóstico.<br><br>
+
+5. Notas de evolución: Permite al dentista registrar el detalle del tratamiento realizado, las observaciones y los avances clínicos directamente en el expediente del paciente.<br><br>
+
+6. Datos de pago recibido: La recepcionista registra los ingresos por los servicios odontológicos brindados y el sistema genera inmediatamente el comprobante de pago para el paciente.<br><br>
+
+7. Reportes de agenda: Permite al sistema procesar las citas programadas para entregar el reporte de estado a la recepcionista y la agenda diaria de pacientes al dentista.</P>
         
     </main>
 
-    <footer class="bg-surface-container dark:bg-surface-dim w-full py-12 border-t border-outline-variant">
-        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="space-y-4">
-                <span class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">Creadent</span>
-                <p class="font-body-md text-on-surface-variant pr-8">Innovación en ortodoncia e implantología oral con los más altos estándares de calidad y ética profesional.</p>
+    <footer class="pt-24 pb-12 border-t border-outline-variant bg-primary text-on-primary">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img alt="Logo Creadent" class="h-50 w-auto" src="/Resources/logoFinal.png">
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Enlaces Rápidos</h5>
+                    <ul class="space-y-3">
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="marco-teorico.html">Marco Teórico</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="analisis-estructurado.html">Análisis Estructurado</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="orientado-a-objetos.html">Orientado a Objetos</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Servicios</h5>
+                    <ul class="space-y-3">
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Ortodoncia Invisible</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Implantes Dentales</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Blanqueamiento</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Odontopediatría</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Contacto</h5>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">phone</span>
+                            +591 69987205
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">mail</span>
+                            luque2219@gmail.com
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">location_on</span>
+                            La Paz, Bolivia
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="space-y-4">
-                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Enlaces Rápidos</h5>
-                <ul class="space-y-2">
-                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Facebook</a></li>
-                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Instagram</a></li>
-                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">LinkedIn</a></li>
-                </ul>
+            <div class="pt-8 border-t border-outline-variant/30 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-secondary text-white/80">© 2026 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
+                <div class="flex gap-8 text-sm font-semibold text-white">
+                    <a class="" href="#">Privacidad</a>
+                    <a class="" href="#">Términos</a>
+                    <a class="" href="#">Cookies</a>
+                </div>
             </div>
-            <div class="space-y-4">
-                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Legal</h5>
-                <ul class="space-y-2">
-                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Privacidad</a></li>
-                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Términos</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/30 text-center">
-            <p class="font-body-md text-on-surface-variant opacity-70">© 2024 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
         </div>
     </footer>
 
