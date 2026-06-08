@@ -118,6 +118,16 @@
       opacity: 1;
       transform: scaleY(1);
   }
+
+.items-center{
+    justify-content:space-around !important;
+    align-items:center;
+}
+.items-center{
+            justify-content:space-around !important;
+            align-items:center
+      }
+
 </style>
 </head>
 <body class="bg-surface-chalk text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
@@ -126,15 +136,14 @@
         
         <!-- LOGO -->
         <div class="flex items-center gap-3 shrink-0">
-            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" style="width: 70px; height: auto; padding:0 !important;" src="./Resources/logoGrande.png">
             <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
-            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
         </div>
         
         <!-- ENLACES CENTRALES -->
         <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
         <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
-            <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0" href="index.html">Inicio</a>
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0" href="index.html">Inicio</a>
             
             <!-- DROPDOWN 1: Marco Teórico -->
             <div class="relative group h-full">
@@ -182,7 +191,7 @@
             <!-- DROPDOWN 3: Diagramas -->
             <div class="relative group h-full">
                 <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
-                    Diagramas
+                    Orientado a Objetos
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
                 
@@ -196,7 +205,7 @@
 
             <!-- DROPDOWN 4: Casos de Uso -->
             <div class="relative group h-full">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0  ">
                     Casos de Uso
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
@@ -211,13 +220,11 @@
             </div>            
             
             <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
         </div>
         
         <!-- BOTONES DERECHOS -->
         <div class="flex items-center gap-4 shrink-0">
             <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
-            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
             <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
         </div>
     </nav>
@@ -238,8 +245,8 @@
                     </p>
                 </div>
                 <div class="flex flex-wrap gap-4">
-                    <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all" href="#">Ver Servicios</a>
-                    <a class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary/5 transition-all" href="#">Conoce la Clínica</a>
+                    <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all" href="https://www.facebook.com/ortodonciaeimplatologiacreadent">Ver Servicios</a>
+                    <a class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary/5 transition-all" href="https://www.facebook.com/ortodonciaeimplatologiacreadent">Conoce la Clínica</a>
                 </div>
                 <div class="flex items-center gap-8 pt-8 border-t border-outline-variant">
                     <div>
@@ -259,7 +266,7 @@
             <div class="relative group">
                 <div class="absolute inset-0 bg-primary/10 rounded-[4rem] rotate-3 scale-105 transition-transform group-hover:rotate-6"></div>
                 <div class="relative rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white">
-                    <img alt="Clínica Creadent" class="w-full h-full object-cover aspect-[4/5] transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtfmkjAaEmsENGt1t02zEKNrLcXT-I2BMcROb6a0rnYEODx6JiXlrI5k7RJPxay_HFejlSqdQmMfBIYEyGwtaXaTGRnNFdmes5TZAsRyUgd-EyqgnXkKFCi6JQ3J9ELUezCHPYPBWx3AZYYwOQW2dX3bVg8lDoGJsYEwADrc8AxKrbsFNRjGSh_dn1LIuR8m7JvHxgIuVmUy8E55_w04SklvM-HU9p54xDZ2i0J8qXiiuMgo1X2S92rIT6x">
+                    <img alt="Clínica Creadent" class="w-full h-full object-cover aspect-[4/5] transform group-hover:scale-105 transition-transform duration-700" src="/Resources/clinica.png">
                 </div>
                 <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-xl border border-outline-variant/30 flex items-center gap-4 animate-bounce">
                     <div class="bg-primary-fixed p-3 rounded-full">
@@ -360,20 +367,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3">
-                        <img alt="Logo Creadent" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
-                        <span class="font-display-lg text-headline-md font-bold text-white">Creadent</span>
-                    </div>
-                    <p class="text-on-surface-variant text-white/80">Excelencia en ortodoncia e implantología para devolverte la confianza de una sonrisa perfecta.</p>
-                    <div class="flex gap-4">
-                        <a class="w-10 h-10 rounded-full text-on-primary flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="#">
-                            <span class="material-symbols-outlined text-sm">face_nod</span>
-                        </a>
-                        <a class="w-10 h-10 rounded-full text-on-primary flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="#">
-                            <span class="material-symbols-outlined text-sm">camera</span>
-                        </a>
-                        <a class="w-10 h-10 rounded-full text-on-primary flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="#">
-                            <span class="material-symbols-outlined text-sm">mail</span>
-                        </a>
+                        <img alt="Logo Creadent" class="h-50 w-auto" src="/Resources/logoFinal.png">
                     </div>
                 </div>
                 <div class="space-y-6">

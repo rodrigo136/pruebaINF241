@@ -117,6 +117,10 @@
         transition: all 0.2s ease-in-out;
         transform-origin: top;
     }
+    .items-center{
+            justify-content:space-around !important;
+            align-items:center
+      }
 </style>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased pt-6">
@@ -125,15 +129,14 @@
         
         <!-- LOGO -->
         <div class="flex items-center gap-3 shrink-0">
-            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" style="width: 70px; height: auto; padding:0 !important;" src="./Resources/logoGrande.png">
             <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
-            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
         </div>
         
         <!-- ENLACES CENTRALES -->
         <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
         <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
-            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="index.html">Inicio</a>
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0" href="index.html">Inicio</a>
             
             <!-- DROPDOWN 1: Marco Teórico -->
             <div class="relative group h-full">
@@ -181,7 +184,7 @@
             <!-- DROPDOWN 3: Diagramas -->
             <div class="relative group h-full">
                 <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
-                    Diagramas
+                    Orientado a Objetos
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
                 
@@ -195,7 +198,7 @@
 
             <!-- DROPDOWN 4: Casos de Uso -->
             <div class="relative group h-full">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0  ">
                     Casos de Uso
                     <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
                 </a>
@@ -209,192 +212,85 @@
                 </div>
             </div>            
             
-            <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0" href="video.html">Videos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
         </div>
         
         <!-- BOTONES DERECHOS -->
         <div class="flex items-center gap-4 shrink-0">
             <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
-            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
             <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
         </div>
     </nav>
 </div>
 
 <main>
-    <section class="relative pt-24 pb-32 overflow-hidden">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-            <div class="max-w-2xl">
-                <span class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mb-4 block">Innovación Clínica</span>
-                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Galería Multimedia</h1>
-                <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
-                    Explora el futuro de la odontología a través de nuestra selección de videos. Desde procedimientos de vanguardia hasta historias reales de transformación, descubre por qué la educación del paciente es el corazón de nuestra excelencia clínica.
-                </p>
-            </div>
-        </div>
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed opacity-10 rounded-full blur-3xl"></div>
-        <div class="absolute top-1/2 -left-48 w-[600px] h-[600px] bg-secondary-fixed-dim opacity-5 rounded-full blur-[100px]"></div>
-    </section>
-
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12">
-        <div class="flex flex-wrap gap-4 items-center border-b border-outline-variant pb-6">
-            <button class="px-5 py-2 rounded-full bg-primary text-on-primary font-label-caps text-label-caps">Todos</button>
-            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Procedimientos</button>
-            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Tecnología</button>
-            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Testimonios</button>
-            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Tours</button>
-        </div>
-    </section>
-
+    <div style="height: 50px;"></div>
     <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-24">
         <div class="flex flex-col gap-8">
-            <h2 class="font-headline-md text-headline-md text-primary">Video Destacado: Innovación en Creadent</h2>
+            <h2 class="font-headline-md text-headline-md text-primary">Video : Explorando la Web</h2>
             <div class="relative aspect-video rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE6xbJ1cuAi9ngDn7l1GtAQq-CjoPQo-wEYPZtjaY2KBNiSQDfOkNetDgXD04VzNkJFax16KemdUmCRGpD0WAah_nptO5wBxpuLcrifXdiyIyWSKEITTo4ToqZJV1Qe_oIt-54uCfTQVKhkIGBNlsWfKyibUDa0pitlGVFPXdiEgFdj0SPh3U90mQKlU2l1q4XXG8yr_ULDToOw4D3oUtVQnUTL1zx_kjm1lAuT1GSiZBD-Bqsz4eZ8A8mrK-DZSilkv5C_eR66kad" alt="Innovación en Creadent" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
-                    <div class="w-24 h-24 bg-white/30 backdrop-blur-lg border border-white/40 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
 
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-            <div class="group cursor-pointer">
-                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
-                    <img alt="Ortodoncia Avanzada" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN1nPagRSKu9Sp8lr1lkqCNXnbIR_nXQmAZdBtN9rZ98OFN18dX0dk6i8IZPasW49D4Yht0iW1B3QMz5-My44Ac5V5qXvrzR9uzkRpR_y1KdnEdfAwf8IQEpU1-pi5hC8-VcSNSKhs7NZ4MyzkOzIaG3SoqIMaTfDGKtBvLAMkC1PRarUBje2l4ajQGTRNDongiHA8DetRvXvp-3g0L0m4dcHRWjYBOJ161vpBunx0xpmHK7F9uf1ufBNlGrjScNtF7BIiNC_84rfi">
-                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">Ortodoncia Avanzada</h3>
-                <p class="font-body-md text-body-md text-secondary">Descubra cómo nuestras técnicas invisibles están redefiniendo la estética dental moderna con precisión digital.</p>
-            </div>
-            
-            <div class="group cursor-pointer">
-                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
-                    <img alt="Instalaciones Premium" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE6xbJ1cuAi9ngDn7l1GtAQq-CjoPQo-wEYPZtjaY2KBNiSQDfOkNetDgXD04VzNkJFax16KemdUmCRGpD0WAah_nptO5wBxpuLcrifXdiyIyWSKEITTo4ToqZJV1Qe_oIt-54uCfTQVKhkIGBNlsWfKyibUDa0pitlGVFPXdiEgFdj0SPh3U90mQKlU2l1q4XXG8yr_ULDToOw4D3oUtVQnUTL1zx_kjm1lAuT1GSiZBD-Bqsz4eZ8A8mrK-DZSilkv5C_eR66kad">
-                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">Instalaciones Premium</h3>
-                <p class="font-body-md text-body-md text-secondary">Un recorrido por nuestro center quirúrgico diseñado para ofrecer la máxima comodidad y seguridad clínica.</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
-                    <img alt="Testimonio de Paciente" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlDPuctuS963CeoGEkmbvq1EgyjjlIOWkHrhYuAqDtUkHjaqMTaV21oxoPyuXJb1-k1BobmhNYEbS9HwBbZu5-IXpJl3LQqrwCJHeX42wdiaq0Ers2Te2W3G9IB2QHkNA1Ei-Yt9WhfUwtEiE4opoTNdKTb0ILXo1k49oOf3xxWTjxmX6jSzgksE7FhphL0DkmlcTVTj-SGPu3r46C8o8z0a74PJPiFUwGf5v_x9MBjp8KaBAEaeKSLOPapdcM5fbotbVWg7pMXvGO">
-                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">Testimonio de Paciente</h3>
-                <p class="font-body-md text-body-md text-secondary">La historia de transformación de María: de la inseguridad a una sonrisa radiante tras su tratamiento de implantes.</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
-                    <img alt="Diseño de Sonrisa Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnci_vO90GL121Vqzc8RqN41k4HPltaxJyS-rtvzWfvqcJ4vCdsWFIjKdXqSxZYYPer1T2mSdV2v8Lg_Xvw7Or3iNdml87AVTVmzj65raMZtnEd14L-MVraSidrHGJvEg0CCPt-SW0tqU6VPOranyBxjjxV066GoiwcuQAv72LMo203M4zJ7M021PSJX_UGaKZt0Dw43eZi4lYTRvp9T8R-9ZP31Z66byFFSxgUoiyZKNjUBxOGEeSWXmUhJy82Z30a3zYiMEdXcS5">
-                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">Diseño de Sonrisa Digital</h3>
-                <p class="font-body-md text-body-md text-secondary">Vea cómo planificamos su sonrisa ideal utilizando software de simulación 3D antes de empezar cualquier tratamiento.</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
-                    <img alt="Implantes de Carga Inmediata" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAevipqWi0oanFVsVkUinCJOVRCDLKz8kJ5V3HwQWr_RgMkTZEDfXqH17c1RkTyUeoftoQgMlhak-b7Vl8j322PvBWe8oG-Z5OCBXq262iUZQPSD3D2M4H0t56j8z_Tjqc6C1DkXryMPdBxD9ikJWOqvJZBqdsVC_rRH6KO_TrHxapz8HXtE1X0IWCjPvLGKnBiuJmMzt30Z3mV_9r5bP7LqLolJBaAFL62NJ49HnDMtEizv_K1mN4Or-rtBWE1gO6-B-SzG-GwLOLS">
-                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">Implantes de Carga Inmediata</h3>
-                <p class="font-body-md text-body-md text-secondary">La revolución del reemplazo dental: recupere su funcionalidad y estética en una sola sesión clínica.</p>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
-                    <img alt="Higiene y Protocolos" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGmS4qhkdaP8tDpE9KG5UnDMZr6q1uJGGRmzCfvdlbJHDW0CKCSUsvK6IsxV7wQj0c56NCOaPWBxrAqTD2HGmYu59hN3qRVhkHgTs_2F0qRHx3SH83xymh6Jxbrl1rVK5u-BJ4-_rVE1Q6nK75ZdyMiSsKRdC9ul5pduIWVWgd5atckQmao7YEoxT8ek6eq3hQIZ9SmOhyuywYf0P-4rVo7tYvWWCYvdjN2L380I_Hxkh0uPMSE8rlFRHH88vnRBVxvgwZeHstHJlv">
-                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary mb-2">Higiene y Protocolos</h3>
-                <p class="font-body-md text-body-md text-secondary">Conozca nuestros estándares de bioseguridad y por qué la higiene es el pilar de cada procedimiento en Creadent.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-primary py-24">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="glass-card rounded-2xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary mb-4">¿Desea asesoría personalizada?</h2>
-                    <p class="font-body-lg text-body-lg text-secondary">Nuestros especialistas están listos para analizar su caso y recomendarle el mejor contenido educativo para su tratamiento.</p>
-                </div>
-                <div class="md:w-auto flex flex-col sm:flex-row gap-4">
-                    <button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-caps text-label-caps hover:scale-[0.98] transition-transform shadow-lg">Solicitar Información</button>
-                    <button class="border border-primary text-primary px-8 py-4 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-low transition-colors">Ver Más Videos</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 </main>
 
-<footer class="bg-surface-container-highest w-full py-12 border-t border-outline-variant">
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <div class="flex flex-col gap-4">
-            <span class="font-headline-md text-headline-md text-primary">Creadent</span>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
-                Excelencia clínica y atención de vanguardia para transformar su sonrisa.
-            </p>
-            <div class="flex gap-4 mt-2">
-                <a class="text-primary hover:text-on-primary-container transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-                <a class="text-primary hover:text-on-primary-container transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
-                <a class="text-primary hover:text-on-primary-container transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<footer class="pt-24 pb-12 border-t border-outline-variant bg-primary text-on-primary">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img alt="Logo Creadent" class="h-50 w-auto" src="/Resources/logoFinal.png">
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Enlaces Rápidos</h5>
+                    <ul class="space-y-3">
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="marco-teorico.html">Marco Teórico</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="analisis-estructurado.html">Análisis Estructurado</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="orientado-a-objetos.html">Orientado a Objetos</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Servicios</h5>
+                    <ul class="space-y-3">
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Ortodoncia Invisible</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Implantes Dentales</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Blanqueamiento</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Odontopediatría</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Contacto</h5>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">phone</span>
+                            +591 69987205
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">mail</span>
+                            luque2219@gmail.com
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">location_on</span>
+                            La Paz, Bolivia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-outline-variant/30 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-secondary text-white/80">© 2026 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
+                <div class="flex gap-8 text-sm font-semibold text-white">
+                    <a class="" href="#">Privacidad</a>
+                    <a class="" href="#">Términos</a>
+                    <a class="" href="#">Cookies</a>
+                </div>
             </div>
         </div>
-        <div class="flex flex-col gap-4">
-            <h4 class="font-label-caps text-label-caps text-primary uppercase">Institucional</h4>
-            <ul class="flex flex-col gap-2">
-                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Política de Privacidad</a></li>
-                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Términos de Servicio</a></li>
-                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Aviso Legal</a></li>
-                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Soporte Técnico</a></li>
-            </ul>
-        </div>
-        <div class="flex flex-col gap-4">
-            <h4 class="font-label-caps text-label-caps text-primary uppercase">Contacto</h4>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-                Av. de la Innovación 450, Suite 102<br>
-                CDMX, México<br>
-                +52 (55) 1234 5678<br>
-                contacto@creadent.com
-            </p>
-            <p class="font-body-md text-body-md text-on-surface-variant mt-4">
-                © 2024 Creadent. Todos los derechos reservados.
-            </p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 <script>
         // Lógica de microinteracciones de tarjetas de video
