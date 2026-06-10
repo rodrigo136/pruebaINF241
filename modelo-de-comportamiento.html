@@ -93,237 +93,315 @@
                 "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
             }
         },
-      },
-    }
-    </script>
-    <style>
-      .material-symbols-outlined {
-          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-          display: inline-block;
-          vertical-align: middle;
-      }
-      body {
-          background-color: #fcf9f8;
-          -webkit-font-smoothing: antialiased;
-      }
-      .glass-card {
-          background: rgba(255, 255, 255, 0.7);
-          backdrop-filter: blur(12px);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
-      }
-      .items-center{
-            justify-content:space-around !important;
-            align-items:center
-      }
-    </style>
+    },
+}
+</script>
+<style>
+  .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  body {
+      background-color: #fcf9f8;
+      -webkit-font-smoothing: antialiased;
+  }
+  .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+  }
+  .items-center{
+    justify-content:space-around !important;
+    align-items:center
+}
+</style>
 </head>
 <body class="font-body-md text-on-surface">
 
-     <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-6 py-3 shadow-xl border border-primary/20 bg-primary-container">
-        
-        <!-- LOGO -->
-        <div class="flex items-center gap-3 shrink-0">
-            <img alt="Logo Creadent" class="h-10 w-auto object-contain" style="width: 70px; height: auto; padding:0 !important;" src="./Resources/logoGrande.png">
-            <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
-        </div>
-        
-        <!-- ENLACES CENTRALES -->
-        <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
-        <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
-            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0" href="index.html">Inicio</a>
-            
-            <!-- DROPDOWN 1: Marco Teórico -->
-            <div class="relative group h-full">
-                <!-- Aumentamos el padding vertical (py-4) para expandir el área táctil -->
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
-                    Marco Teórico 
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
-                </a>
-                
-                <!-- "EL PUENTE INVISIBLE": absolute top-full con pt-2 permite cruzar el mouse sin que se cierre -->
-                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
-                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
-                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- DROPDOWN 2: Análisis Estructurado -->
-            <div class="relative group h-full">
-                <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0  ">
-                    Análisis Estructurado 
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
-                </a>
-                
-                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
-                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
-                        <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
-                        
-                        <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- DROPDOWN 3: Diagramas -->
-            <div class="relative group h-full">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
-                    Orientado a Objetos
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
-                </a>
-                
-                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
-                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html">Diagrama de clases</a>
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="diagrama-procesos.html">Diagrama de Procesos</a>
-                    </div>
-                </div>
-            </div>
+   <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-6 py-3 shadow-xl border border-primary/20 bg-primary-container">
 
-            <!-- DROPDOWN 4: Casos de Uso -->
-            <div class="relative group h-full">
-                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
-                    Casos de Uso
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
-                </a>
-                
-                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
-                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso.html">Caso de Uso</a>
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-Negocios.html">Casos de Uso de Negocio</a>
-                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-nivel-expandido.html">Casos de Uso A Nivel Expandido</a>
-                    </div>
-                </div>
-            </div>            
-            
-            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
-        </div>
-        
-        <!-- BOTONES DERECHOS -->
-        <div class="flex items-center gap-4 shrink-0">
-            <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
-            <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
-        </div>
-    </nav>
-
-    <div id="mobile-menu" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
-        <div id="mobile-menu-content" class="absolute top-0 right-0 w-[280px] h-full bg-white p-6 shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300 rounded-l-3xl">
-            <div>
-                <div class="flex justify-between items-center mb-8">
-                    <span class="font-display-lg text-xl font-bold text-primary">Menú</span>
-                    <button id="menu-close-btn" class="text-primary p-1 hover:bg-surface-container rounded-full transition-colors">
-                        <span class="material-symbols-outlined text-2xl">close</span>
-                    </button>
-                </div>
-                <div class="flex flex-col gap-4 text-body-md overflow-y-auto">
-                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="index.html">Inicio</a>
-                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="marco-teorico.html">Marco Teórico</a>
-                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="analisis-estructurado.html">Análisis Estructurado</a>
-                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="orientado-a-objetos.html">Orientado A Objetos</a>
-                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="video.html">Videos</a>
-                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="contactos.html">Contactos</a>
-                </div>
-            </div>
-            <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-primary-container transition-all active:scale-95 shadow-md mt-4">
-                Agendar Cita
-            </button>
-        </div>
+    <!-- LOGO -->
+    <div class="flex items-center gap-3 shrink-0">
+        <img alt="Logo Creadent" class="h-10 w-auto object-contain" style="width: 70px; height: auto; padding:0 !important;" src="./Resources/logoGrande.png">
+        <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
     </div>
 
-    <main class="pt-24 pb-32 max-w-[1200px] mx-auto px-6 min-h-[70vh] flex flex-col items-center justify-start text-center">
-        
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
-            Diagrama de flujo por niveles
-        </h1>
+    <!-- ENLACES CENTRALES -->
+    <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
+    <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
+        <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0" href="index.html">Inicio</a>
 
-        <div class="w-full max-w-4xl rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
-    <img class="w-full h-auto object-contain" src="Resources/Diagramas-DFD por niveles.drawio.png" alt="...">
-</div>
+        <!-- DROPDOWN 1: Marco Teórico -->
+        <div class="relative group h-full">
+            <!-- Aumentamos el padding vertical (py-4) para expandir el área táctil -->
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                Marco Teórico 
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+            </a>
 
-
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
-            Diagrama Entidad-Relación
-        </h1>
-
-        
-        <div class="w-full max-w-4xl rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
-    <img class="w-full h-auto object-contain" src="Resources/Diagramas-DER.drawio.png" alt="...">
-</div>
-        
-    </main>
-
-    <footer class="pt-24 pb-12 border-t border-outline-variant bg-primary text-on-primary">
-        <div class="max-w-container-max mx-auto px-margin-desktop">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3">
-                        <img alt="Logo Creadent" class="h-50 w-auto" src="./Resources/logoFinal.png">
-                    </div>
-                </div>
-                <div class="space-y-6">
-                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Enlaces Rápidos</h5>
-                    <ul class="space-y-3">
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="marco-teorico.html">Marco Teórico</a></li>
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="analisis-estructurado.html">Análisis Estructurado</a></li>
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="orientado-a-objetos.html">Orientado a Objetos</a></li>
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Política de Privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Servicios</h5>
-                    <ul class="space-y-3">
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Ortodoncia Invisible</a></li>
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Implantes Dentales</a></li>
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Blanqueamiento</a></li>
-                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Odontopediatría</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Contacto</h5>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
-                            <span class="material-symbols-outlined">phone</span>
-                            +591 69987205
-                        </li>
-                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
-                            <span class="material-symbols-outlined">mail</span>
-                            luque2219@gmail.com
-                        </li>
-                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
-                            <span class="material-symbols-outlined">location_on</span>
-                            La Paz, Bolivia
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-outline-variant/30 text-center flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-secondary text-white/80">© 2026 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
-                <div class="flex gap-8 text-sm font-semibold text-white">
-                    <a class="" href="#">Privacidad</a>
-                    <a class="" href="#">Términos</a>
-                    <a class="" href="#">Cookies</a>
+            <!-- "EL PUENTE INVISIBLE": absolute top-full con pt-2 permite cruzar el mouse sin que se cierre -->
+            <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planteamiento">Planteamiento del Problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
                 </div>
             </div>
         </div>
-    </footer>
 
-    <button class="fixed bottom-8 right-8 bg-primary text-on-primary w-12 h-12 rounded-full shadow-lg items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110 active:scale-90 z-40 flex" id="back-to-top">
-        <span class="material-symbols-outlined">north</span>
-    </button>
+        <!-- DROPDOWN 2: Análisis Estructurado -->
+        <div class="relative group h-full">
+            <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0  ">
+                Análisis Estructurado 
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+            </a>
 
-    <script>
+            <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                    <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+
+                    <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DROPDOWN 3: Diagramas -->
+        <div class="relative group h-full">
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                Orientado a Objetos
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+            </a>
+
+            <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html">Diagrama de clases</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="diagrama-procesos.html">Diagrama de Procesos</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DROPDOWN 4: Casos de Uso -->
+        <div class="relative group h-full">
+            <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                Casos de Uso
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+            </a>
+
+            <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso.html">Caso de Uso</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-Negocios.html">Casos de Uso de Negocio</a>
+                </div>
+            </div>
+        </div>            
+
+        <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
+        <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
+    </div>
+
+    <!-- BOTONES DERECHOS -->
+    <div class="flex items-center gap-4 shrink-0">
+        <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
+        <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+    <div id="mobile-menu-content" class="absolute top-0 right-0 w-[280px] h-full bg-white p-6 shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300 rounded-l-3xl">
+        <div>
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-display-lg text-xl font-bold text-primary">Menú</span>
+                <button id="menu-close-btn" class="text-primary p-1 hover:bg-surface-container rounded-full transition-colors">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-4 text-body-md overflow-y-auto">
+                <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="index.html">Inicio</a>
+                <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="marco-teorico.html">Marco Teórico</a>
+                <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="analisis-estructurado.html">Análisis Estructurado</a>
+                <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="orientado-a-objetos.html">Orientado A Objetos</a>
+                <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="video.html">Videos</a>
+                <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="contactos.html">Contactos</a>
+            </div>
+        </div>
+        <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-primary-container transition-all active:scale-95 shadow-md mt-4">
+            Agendar Cita
+        </button>
+    </div>
+</div>
+
+<main class="pt-24 pb-32 max-w-[1200px] mx-auto px-6 min-h-[70vh] flex flex-col items-center justify-start text-center">
+
+    <h1 id="dfd" class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
+        Diagrama de flujo por niveles
+    </h1>
+
+    <div class="blog-content">
+        <h3 class="font-display-lg text-headline-md text-primary mb-6">
+            Nivel O
+        </h3>
+        <br>
+        <figure class="blog-thumb">
+            <div class="blog-carousel-2 slick-row-15 slick-arrow-style slick-dot-style">
+                <div class="blog-single-slide">
+                    <img class="w-full h-auto object-contain" src="Resources/nivel0.png" alt="...">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="blog-content">
+        <h3 class="font-display-lg text-headline-md text-primary mb-6">
+            Nivel 1
+        </h3>
+        <br>
+        <figure class="blog-thumb">
+            <div class="blog-carousel-2 slick-row-15 slick-arrow-style slick-dot-style">
+                <div class="blog-single-slide">
+                    <img class="w-full h-auto object-contain" src="Resources/nivel1.png" alt="...">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="blog-content">
+        <h3 class="font-display-lg text-headline-md text-primary mb-6">
+            Nivel 2 - Gestionar citas 
+        </h3>
+        <br>
+        <figure class="blog-thumb">
+            <div class="blog-carousel-2 slick-row-15 slick-arrow-style slick-dot-style">
+                <div class="blog-single-slide">
+                    <img class="w-full h-auto object-contain" src="Resources/nivel2_citas.png" alt="...">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="blog-content">
+        <h3 class="font-display-lg text-headline-md text-primary mb-6">
+            Nivel 2 - Gestionar expedientes
+        </h3>
+        <br>
+        <figure class="blog-thumb">
+            <div class="blog-carousel-2 slick-row-15 slick-arrow-style slick-dot-style">
+                <div class="blog-single-slide">
+                    <img class="w-full h-auto object-contain" src="Resources/nivel2expediente.png" alt="...">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="blog-content">
+        <h3 class="font-display-lg text-headline-md text-primary mb-6">
+            Nivel 2 - Registrar evolucion
+        </h3>
+        <br>
+        <figure class="blog-thumb">
+            <div class="blog-carousel-2 slick-row-15 slick-arrow-style slick-dot-style">
+                <div class="blog-single-slide">
+                    <img class="w-full h-auto object-contain" src="Resources/nivel2evolucion.png" alt="...">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="blog-content">
+        <h3 class="font-display-lg text-headline-md text-primary mb-6">
+            Nivel 2 - Controlar finanzas
+        </h3>
+        <br>
+        <figure class="blog-thumb">
+            <div class="blog-carousel-2 slick-row-15 slick-arrow-style slick-dot-style">
+                <div class="blog-single-slide">
+                    <img class="w-full h-auto object-contain" src="Resources/nivel2finanzas.png" alt="...">
+                </div>
+            </div>
+        </figure>
+    </div>
+
+
+    <h1 id="der" class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
+        Diagrama Entidad-Relación
+    </h1>
+
+
+    <div class="w-full max-w-4xl rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
+        <img class="w-full h-auto object-contain" src="Resources/Diagramas-DER.drawio.png" alt="...">
+    </div>
+
+</main>
+
+<footer class="pt-24 pb-12 border-t border-outline-variant bg-primary text-on-primary">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="Logo Creadent" class="h-50 w-auto" src="./Resources/logoFinal.png">
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h5 class="font-bold uppercase tracking-widest text-sm text-white">Enlaces Rápidos</h5>
+                <ul class="space-y-3">
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="marco-teorico.html">Marco Teórico</a></li>
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="analisis-estructurado.html">Análisis Estructurado</a></li>
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="orientado-a-objetos.html">Orientado a Objetos</a></li>
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h5 class="font-bold uppercase tracking-widest text-sm text-white">Servicios</h5>
+                <ul class="space-y-3">
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Ortodoncia Invisible</a></li>
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Implantes Dentales</a></li>
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Blanqueamiento</a></li>
+                    <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Odontopediatría</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h5 class="font-bold uppercase tracking-widest text-sm text-white">Contacto</h5>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                        <span class="material-symbols-outlined">phone</span>
+                        +591 69987205
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                        <span class="material-symbols-outlined">mail</span>
+                        rodri123@gmail.com
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                        <span class="material-symbols-outlined">location_on</span>
+                        La Paz, Bolivia
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-outline-variant/30 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-secondary text-white/80">© 2026 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
+            <div class="flex gap-8 text-sm font-semibold text-white">
+                <a class="" href="#">Privacidad</a>
+                <a class="" href="#">Términos</a>
+                <a class="" href="#">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-12 h-12 rounded-full shadow-lg items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110 active:scale-90 z-40 flex" id="back-to-top">
+    <span class="material-symbols-outlined">north</span>
+</button>
+
+<script>
         // Lógica del Menú Móvil (Drawer)
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuContent = document.getElementById('mobile-menu-content');
