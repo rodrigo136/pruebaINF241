@@ -117,6 +117,8 @@
             align-items:center
       }
     </style>
+    <script src="lupa.js"></script>
+<link rel="stylesheet" href="lupa.css">
 </head>
 <body class="font-body-md text-on-surface">
 
@@ -241,16 +243,17 @@
     </div>
 
     <main class="pt-24 pb-32 max-w-[1200px] mx-auto px-6 min-h-[70vh] flex flex-col items-center justify-start text-center">
-        
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
-            Diagrama de clases
-        </h1>
+    
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
+        Diagrama de clases
+    </h1>
 
-        <div class="w-full max-w-4xl rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
-    <img class="w-full h-auto object-contain" src="Resources/Diagramas-Orientado a Objetos.drawio.png" alt="...">
-</div>
-        
-    </main>
+    <div class="lupa-container w-full max-w-4xl rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
+        <img class="w-full h-auto object-contain" src="Resources/Diagramas-Orientado a Objetos.drawio.png" alt="...">
+        <div class="lens"></div>
+    </div>
+    
+</main>
 
     <footer class="pt-24 pb-12 border-t border-outline-variant bg-primary text-on-primary">
         <div class="max-w-container-max mx-auto px-margin-desktop">
