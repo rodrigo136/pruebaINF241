@@ -1,0 +1,30 @@
+.lupa-container {
+    position: relative;
+    width: 100%;
+    border-radius: 1.5rem;
+    overflow: visible;
+    box-shadow: 0 40px 40px -20px rgba(0,51,85,0.08);
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: white;
+    cursor: none;
+    margin-bottom: 20px;
+}
+
+.lupa-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lens {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 100;
+    display: none;
+}
